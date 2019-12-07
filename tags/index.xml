@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on </title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 28 Jun 2012 23:45:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>dev</title>
+      <link>/tags/dev/</link>
+      <pubDate>Thu, 28 Jun 2012 23:45:00 +0000</pubDate>
+      
+      <guid>/tags/dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>talksbyme</title>
+      <link>/tags/talksbyme/</link>
+      <pubDate>Mon, 05 Dec 2011 04:01:00 +0000</pubDate>
+      
+      <guid>/tags/talksbyme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>books</title>
+      <link>/tags/books/</link>
+      <pubDate>Thu, 19 May 2011 04:46:00 +0000</pubDate>
+      
+      <guid>/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writing</title>
+      <link>/tags/writing/</link>
+      <pubDate>Thu, 19 May 2011 04:46:00 +0000</pubDate>
+      
+      <guid>/tags/writing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hacker-series</title>
+      <link>/tags/hacker-series/</link>
+      <pubDate>Wed, 18 May 2011 01:45:00 +0000</pubDate>
+      
+      <guid>/tags/hacker-series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>/tags/music/</link>
+      <pubDate>Sat, 16 Apr 2011 02:59:00 +0000</pubDate>
+      
+      <guid>/tags/music/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
