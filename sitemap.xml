@@ -18,12 +18,12 @@
   </url>
   
   <url>
-    <loc>/tags/dev/</loc>
+    <loc>/categories/dev/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/dev/</loc>
+    <loc>/tags/dev/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
@@ -68,12 +68,12 @@
   </url>
   
   <url>
-    <loc>/categories/books/</loc>
+    <loc>/tags/books/</loc>
     <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/books/</loc>
+    <loc>/categories/books/</loc>
     <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
@@ -88,12 +88,12 @@
   </url>
   
   <url>
-    <loc>/tags/hacker-series/</loc>
+    <loc>/categories/hacker-series/</loc>
     <lastmod>2011-05-18T01:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/hacker-series/</loc>
+    <loc>/tags/hacker-series/</loc>
     <lastmod>2011-05-18T01:45:00+00:00</lastmod>
   </url>
   
@@ -108,12 +108,12 @@
   </url>
   
   <url>
-    <loc>/categories/music/</loc>
+    <loc>/tags/music/</loc>
     <lastmod>2011-04-16T02:59:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/music/</loc>
+    <loc>/categories/music/</loc>
     <lastmod>2011-04-16T02:59:00+00:00</lastmod>
   </url>
   
