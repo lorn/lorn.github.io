@@ -100,10 +100,10 @@ A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de u
     
     <item>
       <title>Usando ZSH</title>
-      <link>/usando-zsh/</link>
+      <link>/post/usando-zsh/</link>
       <pubDate>Tue, 12 Apr 2011 05:24:00 +0000</pubDate>
       
-      <guid>/usando-zsh/</guid>
+      <guid>/post/usando-zsh/</guid>
       <description>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)
 E vou dizer, não há shell melhor :) muito melhor que o Bash
  O historico do ZSH é compartilhado por TODAS sessões dele, diferente do bash que cada sessão tem seu histórico ( e você tem que ficar procurando onde foi que digitou aquele comando para recuperar ele do histórico ). ZSH tem autocomplete para tudo, ok bash também, mas o ZSH é bem mágico ele tem autocomplete para o kill, listando os processos que estão rolando e você digita o nome ele já tras o pid para você, ps -aux?</description>

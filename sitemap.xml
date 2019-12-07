@@ -88,12 +88,12 @@
   </url>
   
   <url>
-    <loc>/tags/hacker-series/</loc>
+    <loc>/categories/hacker-series/</loc>
     <lastmod>2011-05-18T01:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/hacker-series/</loc>
+    <loc>/tags/hacker-series/</loc>
     <lastmod>2011-05-18T01:45:00+00:00</lastmod>
   </url>
   
@@ -123,7 +123,7 @@
   </url>
   
   <url>
-    <loc>/usando-zsh/</loc>
+    <loc>/post/usando-zsh/</loc>
     <lastmod>2011-04-12T05:24:00+00:00</lastmod>
   </url>
   
