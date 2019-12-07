@@ -18,12 +18,12 @@
   </url>
   
   <url>
-    <loc>/categories/dev/</loc>
+    <loc>/tags/dev/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/dev/</loc>
+    <loc>/categories/dev/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
@@ -88,12 +88,12 @@
   </url>
   
   <url>
-    <loc>/categories/hacker-series/</loc>
+    <loc>/tags/hacker-series/</loc>
     <lastmod>2011-05-18T01:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/hacker-series/</loc>
+    <loc>/categories/hacker-series/</loc>
     <lastmod>2011-05-18T01:45:00+00:00</lastmod>
   </url>
   
@@ -108,12 +108,12 @@
   </url>
   
   <url>
-    <loc>/categories/music/</loc>
+    <loc>/tags/music/</loc>
     <lastmod>2011-04-16T02:59:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/music/</loc>
+    <loc>/categories/music/</loc>
     <lastmod>2011-04-16T02:59:00+00:00</lastmod>
   </url>
   
@@ -128,12 +128,12 @@
   </url>
   
   <url>
-    <loc>/perl-para-sysadmins-e-dbas/</loc>
+    <loc>/post/perl-para-sysadmins-e-dbas/</loc>
     <lastmod>2009-01-20T04:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2007-02-14-sandman-casa-de-bonecas/</loc>
+    <loc>/post/2007-02-14-sandman-casa-de-bonecas/</loc>
     <lastmod>2007-02-14T14:31:00+00:00</lastmod>
   </url>
   
@@ -150,6 +150,11 @@
   <url>
     <loc>/post/fisl-7-0/</loc>
     <lastmod>2006-04-19T20:23:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>
