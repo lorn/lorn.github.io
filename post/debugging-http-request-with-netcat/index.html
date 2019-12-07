@@ -42,7 +42,7 @@ $ curl https://api.github.com/repos" />
     <meta property="og:image" content="/images/2019/02/Netcat_o.jpg"/>
 
 
-    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="generator" content="Hugo 0.57.2" />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="/built/screen.css" /> 
@@ -115,30 +115,47 @@ $ curl https://api.github.com/repos" />
     <section class="post-full-content">
         <div class="kg-card-markdown">
         <p>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.</p>
+
 <p><code>$ curl https://api.github.com/repos/lorn/lwp-curl/commits</code></p>
+
 <p>Mas quando você vai para sua linguagem botar a mão na massa, dá erro:</p>
+
 <pre><code>$ curl &quot;https://api.github.com/repos1/lorn/lwp-curl/commits1&quot;
 
 {
   &quot;message&quot;: &quot;Not Found&quot;
 }
-</code></pre><p>é claro que nem sempre o erro será tão claro, e principalmente quando  você está fazendo POST/PUT com arquivos, como debugar? porque funciona  no curl e não funciona na minha linguagem preferida?</p>
+</code></pre>
+
+<p>é claro que nem sempre o erro será tão claro, e principalmente quando  você está fazendo POST/PUT com arquivos, como debugar? porque funciona  no curl e não funciona na minha linguagem preferida?</p>
+
 <blockquote>
 <p>Netcat for the rescue!</p>
 </blockquote>
+
 <p>Netcat é o canivete suiço do mundo unix, se você nunca ouviu falar e  quer aprender até a transferir arquivos via Netcat (!!) veja esse post  do <a href="http://www.catonmat.net/blog/unix-utilities-netcat/">pkrumins</a> nesse caso especifico, vamos usar Netcat para debugar requisições HTTP e isso ele não mostra lá ;)</p>
+
 <p>Essa requisição do curl:</p>
+
 <p><code>$ curl &quot;localhost:9999/repos/lorn/lwp-curl/commits&quot;</code></p>
+
 <p>Aparece assim no Netcat</p>
+
 <pre><code>$ nc -l localhost 9999
 GET /repos/lorn/lwp-curl/commits HTTP/1.1
 User-Agent: curl/7.21.4 (universal-apple-darwin11.0) libcurl/7.21.4 OpenSSL/0.9.8r zlib/1.2.5
 Host: localhost:9999
 Accept: */*
-</code></pre><p>Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o  Netcat - localhost:9999 nesse exemplo - e veja a diferença entre o  ‘debug’ do nc, para quando a requisição vem do curl, e o ‘debug’ do nc  para quando a requisição vem da sua aplicação, no meu caso eu tinha  esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
+</code></pre>
+
+<p>Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o  Netcat - localhost:9999 nesse exemplo - e veja a diferença entre o  ‘debug’ do nc, para quando a requisição vem do curl, e o ‘debug’ do nc  para quando a requisição vem da sua aplicação, no meu caso eu tinha  esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
+
 <p>Para usar o Netcat no Mac/BSD:</p>
+
 <p><code>$ nc -l localhost 9999</code></p>
+
 <p>Linux:</p>
+
 <p><code>nc -l -p 9999</code></p>
     
         </div>
@@ -179,13 +196,13 @@ Accept: */*
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="/post/2007-01-23-livro-minority-report/">Livro Minority Report</a></li>            
+          <li><a href="/perl-para-sysadmins-e-dbas/">Perl Para Sysadmins E DBAs</a></li>            
         
-          <li><a href="/post/2006-11-21-relato-conilsi-yapc-sa-2006/">Relato Conilsi - YAPC::SA::2006</a></li>            
+          <li><a href="/a-busca-pelo-deploy-continuo-parte-3/">A Busca Pelo Deploy Contínuo - Parte 3</a></li>            
         
-          <li><a href="/como-funciona-a-escala-pentatonica/">Como Funciona a Escala Pentatonica</a></li>            
+          <li><a href="/usando-zsh/">Usando ZSH</a></li>            
         
-          <li><a href="/a-busca-pelo-deploy-continuo-parte-1/">A Busca Pelo Deploy Contínuo - Parte 1</a></li>            
+          <li><a href="/meu-ambiente-de-trabalho-em-n-itens/">Meu Ambiente De Trabalho Em N Itens</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

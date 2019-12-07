@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
@@ -20,7 +20,7 @@
       <description>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.
 $ curl https://api.github.com/repos/lorn/lwp-curl/commits
 Mas quando você vai para sua linguagem botar a mão na massa, dá erro:
-$ curl &amp;quot;https://api.github.com/repos1/lorn/lwp-curl/commits1&amp;quot; { &amp;quot;message&amp;quot;: &amp;quot;Not Found&amp;quot; } é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar? porque funciona no curl e não funciona na minha linguagem preferida?</description>
+$ curl &amp;quot;https://api.github.com/repos1/lorn/lwp-curl/commits1&amp;quot; { &amp;quot;message&amp;quot;: &amp;quot;Not Found&amp;quot; }  é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar? porque funciona no curl e não funciona na minha linguagem preferida?</description>
     </item>
     
     <item>
@@ -53,6 +53,7 @@ Agora que você já está convencido que precisa disso, ou não, vou começar a 
       <guid>/a-busca-pelo-deploy-continuo-parte-1/</guid>
       <description>Você está lendo a Parte 1 sobre &amp;ldquo;A Busca pelo deploy contínuo&amp;rdquo; esse post tem mais duas continuações: Parte 2 e Parte 3.
 No dia 05/11 apresentei no YAPC::Brasil uma palestra com o nome “Em busca do deploy continuo” nesse post vou tentar descrever sobre tudo o que eu falei.
+  A busca pelo deploy continuo  from Lindolfo Rodrigues Oliveira Neto 
 Como começar? Infelizmente o principal problema do “Deploy Continuo” não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:</description>
     </item>
     
@@ -84,7 +85,7 @@ A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de u
       <pubDate>Sat, 16 Apr 2011 02:59:00 +0000</pubDate>
       
       <guid>/como-funciona-a-escala-pentatonica/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -116,7 +117,7 @@ E vou dizer, não há shell melhor :) muito melhor que o Bash
       <guid>/perl-para-sysadmins-e-dbas/</guid>
       <description>Rau!
 Depois de séculos sem posts, apenas um post para linkar para o material da minha palestra no fisl ( que não foi das melhores porque não terminei a palestra antes e fiquei BEM doente em POA :/ )
-~~https://lornlab.org/palestra_fisl/~~
+https://lornlab.org/palestra_fisl/
 Agradecimentos para o Claudemir Ivan, que disse que não estava conseguindo acessar os arquivos.
 Falow, algum dia meu blog em Catalyst sai
 Update: O problema era que o Dreamhost estava interpretando os .</description>

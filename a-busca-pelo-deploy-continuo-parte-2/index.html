@@ -39,7 +39,7 @@
     <meta property="og:image" content="/images/2019/02/game-of-thrones-map-of-westerosgame-of-thrones-interactive-map-of-westeros-fansided-sports-kk1f3tai_o.jpg"/>
 
 
-    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="generator" content="Hugo 0.57.2" />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="/built/screen.css" /> 
@@ -111,20 +111,30 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        <p>Você está lendo a Parte 2 sobre &ldquo;A Busca pelo deploy contínuo&rdquo; eu recomendo você a começar pela <a href="https://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="https://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.</p>
+        
+
+<p>Você está lendo a Parte 2 sobre &ldquo;A Busca pelo deploy contínuo&rdquo; eu recomendo você a começar pela <a href="https://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="https://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.</p>
+
 <p>Agora que você já está convencido que precisa disso, ou não, vou  começar a falar de algumas ferramentas/técnicas que você pode usar para  te ajudar no processo:</p>
+
 <ul>
 <li>SCM - Software Configuration Management</li>
 </ul>
+
 <p>Também conhecido como VCS ( Version Control System ), você precisa disso, se você não tem <strong>há algo muito errado</strong> e se você está usando Subversion, isso não é tão ruim, mas comece a usar git a partir de hoje, sério.</p>
+
 <ul>
 <li>Testes</li>
 </ul>
+
 <p>Se você acha que teste é besteira, então deploy continuo é besteira  para você também. É impossível ter um deploy contínuo confiável sem  testes</p>
+
 <ul>
 <li>Continuos Integration Software</li>
 </ul>
+
 <p>Esse tipo de software tem um papel simples, porem eficaz, ele fica  fazendo “pooling” no seu SCM, a cada commit seu ele vai rodar o seu  processo de “build” para ver se ele continua funcionando depois do  código que você acabou de comitar, um processo de build pode conter:</p>
+
 <ul>
 <li>Gerar pacotes</li>
 <li>Verificar códigos/dependências</li>
@@ -133,22 +143,33 @@
 <li>Testes de Segurança</li>
 <li>Testes funcionais</li>
 </ul>
+
 <p>E caso algum teste tenha parado de funcionar, ele vai te enviar um email avisando que o build está quebrado.</p>
+
 <p>Eu uso e gosto bastante do <a href="http://jenkins-ci.org/">Jenkins</a>, conhecido antes como Hudson. Mas há muitos outros por ai, você só precisa escolher um.</p>
+
 <ul>
 <li>Script de Deploy/Rollback para você começar, depois de ter todas  essas coisas acima, você já pode a pensar em automatizar seu processo de  deploy/rollback.   ./deploy.sh    # faz o deploy ./rollback.sh  # faz o rollback do ultimo deploy</li>
 </ul>
+
 <p>Simples assim, mas tem que ser um script só que faz todo o trabalho, copiar arquivos, reinciar webserver etc</p>
+
 <p>Na Etsy quando o script ficou avançado eles evoluiram para um software web, que inclusive é opensource mais detalhes aqui: <a href="http://codeascraft.etsy.com/2010/05/20/quantum-of-deployment/">Deploynator Etsy</a></p>
+
 <ul>
 <li>Puppet/Chef - eu não sei qual o nome dessa categoria de software,  o que você faz com eles é escrever “receitas” de máquinas, imagine que a  empresa está crescendo e você precisa montar 10 novos webservers que  incluem:   Instalar SO Configurar SO Configurar Firewall Configurar Webserver Configurar seu sistema Colocar ela no pool de webservers</li>
 </ul>
+
 <p>Tirando a instalação do Linux, todo o resto você pode automatizar com  puppet ou chef você cria receitas nele dizendo como ele vai configurar  seu Webserver, seu sistema e depois é só executar essa receita na  máquina ele vai instalar o pacote e fazer todo o trabalho pra você.</p>
+
 <p>E você vai precisar fazer isso UMA vez para ‘n’ maquinas, e quando  precisar mudar algo e só alterar na receita ele mantém as maquinas  sincronizadas com sua receitas, nada de sair editando o mesmo arquivo em  várias máquinas.</p>
+
 <ul>
 <li>Monitoramento   Sistema Base/Nagios    Você precisa monitorar o estado do seu sistema, vê se o Apache tá de  pé se o disco tá cheio isso é bem comum, no minímo você já ouviu falar.   Seu negócio    Você precisa também monitorar o seu negócio, você precisa saber que  horas que acontecem mais vendas e precisa saber agora, nada de rodar  aquela query no banco de dados <strong>faça gráfico de toda informação que você puder monitorar</strong>.  Além desses gráficos ajudar o pessoal de Marketing/Vendas vai te  ajudar quando entrar alguma funcionalidade nova no site, porque sempre  tem um espertão na empresa, e muitas vezes esse espertão é o dono, que  vai dizer:  {% blockquote %} Acho que depois que você colocou aquela funcionalidade no site, o site está vendendo menos, estou com esse pressentimento.  - Espertão {% endblockquote %}  A Etsy liberou recentemente a ferramente que eles fizeram para fazer gráficos, vale a pena dar uma olhada <a href="http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/">Measure Anything, Measure Everything</a> eles contam bastante expêriencia deles com geração de gráfico para tudo, até para a quantidade de café na cozinha!  Então tenha gráficos de tudo e mostre para ele no melhor sentido <a href="https://twitter.com/opachefe">Opa chefe! tranquilo chefe!</a>.</li>
 </ul>
-<h2 id="continua-">Continua ..</h2>
+
+<h2 id="continua">Continua ..</h2>
+
 <p>Você está lendo a Parte 2 sobre &ldquo;A Busca pelo deploy contínuo&rdquo; eu recomendo você a começar pela <a href="https://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> mas se já leu as duas partes, leia a <a href="https://lornlab.org/blog/2011/12/03/a-busca-pelo-deploy-continuo-parte-3/">Parte 3</a>.</p>
     
         </div>
@@ -189,13 +210,13 @@
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="/fisl-7-0/">FISL 7.0</a></li>            
+          <li><a href="/perl-para-sysadmins-e-dbas/">Perl Para Sysadmins E DBAs</a></li>            
         
-          <li><a href="/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/">Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick</a></li>            
+          <li><a href="/post/debugging-http-request-with-netcat/">Debugging HTTP Request With Netcat</a></li>            
+        
+          <li><a href="/post/2006-11-21-relato-conilsi-yapc-sa-2006/">Relato Conilsi - YAPC::SA::2006</a></li>            
         
           <li><a href="/usando-zsh/">Usando ZSH</a></li>            
-        
-          <li><a href="/a-biblioteca-pessoal-de-neil-gaiman/">A Biblioteca Pessoal De Neil Gaiman</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -259,6 +280,7 @@ Você não precisa de applicances milionários para fazer isso o github, serve 2
               
                 <p>Você está lendo a Parte 1 sobre &ldquo;A Busca pelo deploy contínuo&rdquo; esse post tem mais duas continuações: Parte 2 e Parte 3.
 No dia 05/11 apresentei no YAPC::Brasil uma palestra com o nome “Em busca do deploy continuo” nesse post vou tentar descrever sobre tudo o que eu falei.
+  A busca pelo deploy continuo  from Lindolfo Rodrigues Oliveira Neto 
 Como começar? Infelizmente o principal problema do “Deploy Continuo” não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais: ...  </p>
               
           </section>

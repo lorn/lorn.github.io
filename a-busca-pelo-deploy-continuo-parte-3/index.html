@@ -39,7 +39,7 @@
     <meta property="og:image" content="/images/2019/02/placa-decorativa-harry-potter-mapa-decoracao.jpg"/>
 
 
-    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="generator" content="Hugo 0.57.2" />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="/built/screen.css" /> 
@@ -111,22 +111,40 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        <p>Você está lendo a Parte 3 sobre &ldquo;A Busca pelo deploy contínuo&rdquo; eu recomendo você a começar pela <a href="https://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> e depois ler a <a href="https://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> se você já o fez, continue ;)</p>
+        
+
+<p>Você está lendo a Parte 3 sobre &ldquo;A Busca pelo deploy contínuo&rdquo; eu recomendo você a começar pela <a href="https://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> e depois ler a <a href="https://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> se você já o fez, continue ;)</p>
+
 <p>Agora um exemplo de arquitetura para facilitar o uso do deploy continuo usando um <a href="http://en.wikipedia.org/wiki/Load_balancing_(computing)">Load Balancer</a>.</p>
+
 <p>Você não precisa de applicances milionários para fazer isso <a href="http://www.anchor.com.au/blog/2009/10/load-balancing-at-github-why-ldirectord/">o github</a>, serve 2500 conexões TCP por <strong>SEGUNDO</strong> usando o <a href="http://horms.net/projects/ldirectord/">ldirectord</a> em uma máquina Xen com 128mb.</p>
+
 <p>Com um Load Balance, você consegue testar funcionalidades novas no  site para uma pequena porção dos usuários do site e usar os gráficos (  que você já tem lógico ) para ver se ela é boa ou não.</p>
+
 <p>Como fazer isso? faça o deploy para apenas 1 das ‘n’ máquinas que  você tem atrás do Load Balancer e redirecione, 5% ~ 10% das suas  conexões dos seus usuários para essa máquina, o resto os gráficos que  você preparou da sua aplicação irão te dizer ;)</p>
+
 <p>Falando um pouco mais de arquitetura, e especificamente de Perl, eu  gosto bastante de usar o Nginx + Starman a comunicação é feita via Unix  Socket o Starman foi baseado no Unicorn do Ruby, ele funciona muito bem  e…</p>
+
 <p>“It’s a unix system I known this!” arquiteturas unix, forks, sockets e afins funcionam muito bem :)</p>
+
 <p>O seu deploy consistiria em copiar os arquivos novos e mandar um sinal de reset para o pid do Starman:</p>
+
 <p><code>$ kill -s USR2 1337</code></p>
+
 <p>Ele vai recarregar o código, e vai reiniciar todos os seus fork assim  que eles forem ficando sem conexões ou seja para seus usuários a  percepção de downtime será <strong>ZERO!</strong></p>
+
 <p>Bom, basicamente é isso se tiver alguma duvida pergunte nos comentários :)</p>
+
 <h2 id="bibliografia">Bibliografia</h2>
+
 <p>Alguns slides foram copiados dessa palestra da etsy:</p>
+
 <p><strong><a href="https://www.slideshare.net/OReillyOSCON/put-a-button-on-it-removing-barriers-to-going-fast">Put a Button on It: Removing Barriers to Going Fast</a></strong> View more presentations from <a href="https://www.slideshare.net/OReillyOSCON">OSCON</a></p>
+
 <p>E outros foram copiados dessa palestra da AOE Media</p>
+
 <p><strong><a href="https://www.slideshare.net/typo3media/continuous-deployment-5345889">Continuous deployment</a></strong> View more <a href="https://www.slideshare.net/">presentations</a> from <a href="https://www.slideshare.net/typo3media">Daniel</a></p>
+
 <p>Obrigado :)</p>
     
         </div>
@@ -167,13 +185,13 @@
     <div class="read-next-card-content">
       
         <ul>
+          <li><a href="/fisl-7-0/">FISL 7.0</a></li>            
+        
           <li><a href="/a-busca-pelo-deploy-continuo-parte-2/">A Busca Pelo Deploy Contínuo - Parte 2</a></li>            
         
-          <li><a href="/usando-zsh/">Usando ZSH</a></li>            
+          <li><a href="/a-biblioteca-pessoal-de-neil-gaiman/">A Biblioteca Pessoal De Neil Gaiman</a></li>            
         
-          <li><a href="/meu-ambiente-de-trabalho-em-n-itens/">Meu Ambiente De Trabalho Em N Itens</a></li>            
-        
-          <li><a href="/fisl-7-0/">FISL 7.0</a></li>            
+          <li><a href="/como-funciona-a-escala-pentatonica/">Como Funciona a Escala Pentatonica</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -204,7 +222,7 @@
                 <p>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.
 $ curl https://api.github.com/repos/lorn/lwp-curl/commits
 Mas quando você vai para sua linguagem botar a mão na massa, dá erro:
-$ curl &quot;https://api.github.com/repos1/lorn/lwp-curl/commits1&quot; { &quot;message&quot;: &quot;Not Found&quot; } é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar? porque funciona no curl e não funciona na minha linguagem preferida? ...  </p>
+$ curl &quot;https://api.github.com/repos1/lorn/lwp-curl/commits1&quot; { &quot;message&quot;: &quot;Not Found&quot; }  é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar? porque funciona no curl e não funciona na minha linguagem preferida? ...  </p>
               
           </section>
       </a>
