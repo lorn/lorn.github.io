@@ -65,5 +65,77 @@
       <description></description>
     </item>
     
+    <item>
+      <title>2007</title>
+      <link>/tags/2007/</link>
+      <pubDate>Wed, 22 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/tags/2007/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dicas.txt</title>
+      <link>/tags/dicas.txt/</link>
+      <pubDate>Wed, 22 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/tags/dicas.txt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>infra</title>
+      <link>/tags/infra/</link>
+      <pubDate>Wed, 22 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/tags/infra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>old</title>
+      <link>/tags/old/</link>
+      <pubDate>Wed, 22 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/tags/old/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>movies</title>
+      <link>/tags/movies/</link>
+      <pubDate>Wed, 01 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/tags/movies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>setup</title>
+      <link>/tags/setup/</link>
+      <pubDate>Mon, 23 Jul 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/tags/setup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>events</title>
+      <link>/tags/events/</link>
+      <pubDate>Tue, 17 Apr 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/tags/events/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>perl</title>
+      <link>/tags/perl/</link>
+      <pubDate>Tue, 17 Apr 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/tags/perl/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

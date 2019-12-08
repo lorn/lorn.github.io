@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>old on </title>
+    <link>/tags/old/</link>
+    <description>Recent content in old on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 22 Aug 2007 14:31:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/old/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Load Balance ou Round Robin de DNS</title>
+      <link>/post/2007-08-22-sitemap-no-google/</link>
+      <pubDate>Wed, 22 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-08-22-sitemap-no-google/</guid>
+      <description>Eu sempre vi um Sitemap como uma ajuda para o usuário encontrar o que está buscando, tipo: “Ah, eu vi alguma coisa sobre compilar o Apache nesse site mas, não acho, deixa eu ver o mapa do site a.k.a Sitemap, opa achei!” Você pode estar pensando: “é, mas o google faz isso muito melhor e mais fácil hoje em dia basta usar na busca site:http://www.lornlab.org”. Sim, mas eu sou da época que passava reportagem sobre o Aonde na televisão, dizendo que o criador, que só tinha 16 anos, tinha tido uma brilhante idéia, e agora ganhava muito dinheiro e empregava a família inteira, nessa época mapa do site ajudava muito :)</description>
+    </item>
+    
+    <item>
+      <title>Skype offline</title>
+      <link>/post/2007-08-20-skype-offline/</link>
+      <pubDate>Mon, 20 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-08-20-skype-offline/</guid>
+      <description>O Skype ficou offline semana passada, o pessoal da empresa disse que era problemas na infra deles. Hoje vi no Meiobit que tinha um hoax dizendo que foram os Russos, sempre eles “Na Rússia soviética você não vai até o skype, ele vem até você”, e até apareceu um script Perl por lá, a possível causa de toda a bagunça:
+#!/usr/bin/perl # Simle Code by Maranax Porex ;D # Ya Skaypeg!</description>
+    </item>
+    
+    <item>
+      <title>300</title>
+      <link>/post/2007-08-01-300/</link>
+      <pubDate>Wed, 01 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-08-01-300/</guid>
+      <description>Assisti 300 em DVD, gostei como toda adaptação dos quadrinhos do Frank Miller, Sin City ficou muito bom também, tinha alguns detalhes a mais, que não tinha nos quadrinhos, mas com certeza foi só para deixar um ar de “sobrenatural”, gostei também do DVD de extras que tem entrevistas com historiadores sobre Esparta, entrevistas com Frank Miller e com o Diretor ( Zack Snyder) .
+De acordo os historiadores para cada “Espartano” tinha 15 escravos (!</description>
+    </item>
+    
+    <item>
+      <title>Transformers, o filme</title>
+      <link>/post/2007-07-23-transformers-o-filme/</link>
+      <pubDate>Wed, 01 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-07-23-transformers-o-filme/</guid>
+      <description>Eu estava muito ansioso para ver o filme dos Transformers, eu sou da nova geração de Transformers conhecida como “Beast Wars” diria que é um fork do Transformers original, a diferença é que por default eles são animais e não veiculos ,a história também não se passa na terra, mas com o tempo acontecem algumas evoluções e eles acabam virando veiculos com um leve toque animal, não são Autobots e Decepticons, mas são Maximals e Predacons, e os unicos personagens que tem os mesmos nomes são Optimus Prime e Megatron, o resto dos personagens você até consegue fazer uma semelhança com os da série antiga mas tem outros nomes.</description>
+    </item>
+    
+    <item>
+      <title>ZFS com Oracle</title>
+      <link>/post/2007-08-01-zfs-com-oracle/</link>
+      <pubDate>Wed, 01 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-08-01-zfs-com-oracle/</guid>
+      <description>Consegui colocar o primeiro servidor Solaris em produção :) e aproveitei para fazer uns testes no ZFS. Conversei com o DBA aqui e ele criou toda a estrutura do Oracle no ZFS e…ficou muito lerdo! :( pior, mais lerdo que Windows com NTFS!! Ai ele pesquisou na internet e tal e eis que o mundo inteiro tem esse problema… Eu estava animado com ZFS pois Benchmarks diziam que ZFS era muito rápido.</description>
+    </item>
+    
+    <item>
+      <title>Safari algum tempo depois</title>
+      <link>/post/2007-07-23-safari-algum-tempo-depois/</link>
+      <pubDate>Mon, 23 Jul 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-07-23-safari-algum-tempo-depois/</guid>
+      <description>Há pouco mais que um mês eu comecei a usar o novo Safari, tinha lido que ele renderizava paginas mais rapido e etc resolvi testar, e não é que eu gostei? :) é lógico que não tem como abandonar o Firefox com todas usas extensões mas basicamente só uso o Firefox pra trabalhar e acessar o site do banco, 60% do tempo o Firefox fica fechado e a memória do Macbook agracede ;) O Safari realmente renderiza páginas mais rápidos, mas não é só isso eu percebi que não usava tudo que o Firefox tinha e basicamente o que eu preciso é: um browser com abas.</description>
+    </item>
+    
+    <item>
+      <title>O Homem do Castelo Alto</title>
+      <link>/post/2007-06-13-o-homem-do-castelo-alto/</link>
+      <pubDate>Wed, 13 Jun 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-06-13-o-homem-do-castelo-alto/</guid>
+      <description>Livro clássico do Philp K. Dick, o mesmo autor de Minority Report, muito interessante, conta como seria o mundo se o “Eixo” divesse ganhado a 2a guerra mundial, para quem não sabe o Eixo é a Alemanhã, Italia, e o Japão, por causa disso muitas pessoas no mundo estão usando o “Oraculo” que é o I-Ching, eu sei o I-Ching é chinês mas ele é usado nesse mundo :P, e na historia tem um livro que é meio proibido que conta o contrario ( que é a nossa relidade ), ou seja, o Eixo perdendo a guerra, toda a historia vai de utilização do iChing pra saber o que fazer, e os personagens comentando esse livro, offtopicamente eu ganhei o livro do Peka no ultimo amigo secreto da empresa, misteriosamente eu gostei mais do marca pagina que veio junto do que dos livros :P o marca pagina diz “Selecione os seus pensamentos, pois eles conduzem o seu sucesso” ou coisa assim, arrumo assim que estiver com o marca página na mão ;) valeu Peka.</description>
+    </item>
+    
+    <item>
+      <title>Testando o Safari</title>
+      <link>/post/2007-06-12-testando-o-safari/</link>
+      <pubDate>Tue, 12 Jun 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-06-12-testando-o-safari/</guid>
+      <description>Bom, como vocês já sabem estou com um Macbook, logo, estou utilizando MacOSX e confesso que praticamente não utilizei o Safari, não dei muita chance pro browser, fui logo pro Firefox, só que depois do boom que vai ser lançado para Windows, todo mundo comentando, falando que é rapido e tal, não resisti, vou testar o Safari por um tempo pra ver se sobrevivo depois posto um mini-review, não estou utilizando muitas extensões no firefox e a unica que senti falta até agora foi o Scribfire, estou escrevendo esse post direto pela interface do Wordpress, faz uns 20min que estou usando e realmente, ele renderiza mais rapido, e com certeza não deve comer tanta memoria como o Firefox ;) Vamos ver no que vai dar.</description>
+    </item>
+    
+    <item>
+      <title>1 mês e meio depois</title>
+      <link>/post/2007-06-08-1-mes-e-meio-depois/</link>
+      <pubDate>Fri, 08 Jun 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-06-08-1-mes-e-meio-depois/</guid>
+      <description>Bom, dessa vez eu tenho uma boa desculpa ;) Eu não falei no Post do FISL, mas eu comprei um Macbook Black, e sim, é muito legal o hardware o software, o MacOSX é “fandardigo” ( como diria o tiririca ) não vou falar que em 1 mês e meio nunca travou, travou 1 ou outro software quando eu forçava a barra :P, mas nada que tivesse que reiniciar o sistema.</description>
+    </item>
+    
+    <item>
+      <title>Fisl 8</title>
+      <link>/post/2007-04-17-fisl-8/</link>
+      <pubDate>Tue, 17 Apr 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-04-17-fisl-8/</guid>
+      <description>Mais um Fisl que eu consegui ir :) esse infelizmente não vi muitas palestras porque estava participando do Hackthon de Perl6, mas vamos as minhas considerações:
+Eu não consegui ver muitas palestras, primeiro porque não tinha muitas que me interessavam ( apesar de eu ter perdido umas 2 muito interessantes ) eu estava enrolado com o Hackthon do Perl6 queria começar a entender o Perl6 e ajudar em alguma coisa, mas devido a problemas na rede do Fisl, que tantas outra pessoas também diveram, estava dificil instalar as coisas necessárias, mas foi bem proveitoso, eu entendi melhor o Perl6 ( tinha muita coisa pra explicar ) mesmo assim, houve avanços no desenvolvimento que podem ser conferidos aqui, parabéns a todos que participaram :D</description>
+    </item>
+    
+    <item>
+      <title>Sandman - Casa De Bonecas</title>
+      <link>/post/2007-02-14-sandman-casa-de-bonecas/</link>
+      <pubDate>Wed, 14 Feb 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-02-14-sandman-casa-de-bonecas/</guid>
+      <description>Como Sandman é tão famoso e eu nunca tinha lido, não resisti, e comecei a ler a queria começar pelo 1o mas a edição está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi não há nenhum problema com isso você não perde nada.
+  O titulo é estranho e você só entende o porque dele nas ultimas 10 páginas.
+Sandman é muito legal, eu nunca tinha lido nada do Neil Gaiman, outro erro.</description>
+    </item>
+    
+    <item>
+      <title>Neuromancer</title>
+      <link>/post/2007-01-24-neuromancer/</link>
+      <pubDate>Wed, 24 Jan 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-01-24-neuromancer/</guid>
+      <description>Neuromancer, um clássico de 1984, o livro que criou o termo Matrix, na introdução do livro alguém ( que eu esqueci o nome ) compara os personagens do livro com os personagem do filme tipo, X é parecido com o Morpheus, etc, eu vou ser bem sincero as primeiras 100 paginas são bem sonolentas, fala muito de droga, etc, mais depois fica muito bom, todo o mistério que eles criam todas as “funcionalidades” da matrix, que lá é um conceito bem diferente do filme, digamos que até mais real.</description>
+    </item>
+    
+    <item>
+      <title>Load Balance ou Round Robin de DNS</title>
+      <link>/post/2007-01-22-load-balance-dns-round-robin/</link>
+      <pubDate>Mon, 22 Jan 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-01-22-load-balance-dns-round-robin/</guid>
+      <description>Bom, eu escrevi load balance para ajudar na pesquisa do Google mas, isso aqui está mais para Round-Robin :) Eu fiz isso com o Bind 9 mas, DNS é DNS, acho que funciona eu qualquer outro, a idéia é bem simples, veja por você mesmo:
+$TTL 3600 @ IN SOA kerberos.quux.com.br. support.quux.com.br. ( 2007091403 ; serial 10800 ; refresh period 1800 ; retry period 2419200 ; expire period 86400) ; minimum TTL period ; @ IN NS kerberos.</description>
+    </item>
+    
+  </channel>
+</rss>

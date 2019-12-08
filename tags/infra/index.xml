@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>infra on </title>
+    <link>/tags/infra/</link>
+    <description>Recent content in infra on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 22 Aug 2007 14:31:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/infra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Load Balance ou Round Robin de DNS</title>
+      <link>/post/2007-08-22-sitemap-no-google/</link>
+      <pubDate>Wed, 22 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-08-22-sitemap-no-google/</guid>
+      <description>Eu sempre vi um Sitemap como uma ajuda para o usuário encontrar o que está buscando, tipo: “Ah, eu vi alguma coisa sobre compilar o Apache nesse site mas, não acho, deixa eu ver o mapa do site a.k.a Sitemap, opa achei!” Você pode estar pensando: “é, mas o google faz isso muito melhor e mais fácil hoje em dia basta usar na busca site:http://www.lornlab.org”. Sim, mas eu sou da época que passava reportagem sobre o Aonde na televisão, dizendo que o criador, que só tinha 16 anos, tinha tido uma brilhante idéia, e agora ganhava muito dinheiro e empregava a família inteira, nessa época mapa do site ajudava muito :)</description>
+    </item>
+    
+    <item>
+      <title>Skype offline</title>
+      <link>/post/2007-08-20-skype-offline/</link>
+      <pubDate>Mon, 20 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-08-20-skype-offline/</guid>
+      <description>O Skype ficou offline semana passada, o pessoal da empresa disse que era problemas na infra deles. Hoje vi no Meiobit que tinha um hoax dizendo que foram os Russos, sempre eles “Na Rússia soviética você não vai até o skype, ele vem até você”, e até apareceu um script Perl por lá, a possível causa de toda a bagunça:
+#!/usr/bin/perl # Simle Code by Maranax Porex ;D # Ya Skaypeg!</description>
+    </item>
+    
+    <item>
+      <title>ZFS com Oracle</title>
+      <link>/post/2007-08-01-zfs-com-oracle/</link>
+      <pubDate>Wed, 01 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-08-01-zfs-com-oracle/</guid>
+      <description>Consegui colocar o primeiro servidor Solaris em produção :) e aproveitei para fazer uns testes no ZFS. Conversei com o DBA aqui e ele criou toda a estrutura do Oracle no ZFS e…ficou muito lerdo! :( pior, mais lerdo que Windows com NTFS!! Ai ele pesquisou na internet e tal e eis que o mundo inteiro tem esse problema… Eu estava animado com ZFS pois Benchmarks diziam que ZFS era muito rápido.</description>
+    </item>
+    
+    <item>
+      <title>Load Balance ou Round Robin de DNS</title>
+      <link>/post/2007-01-22-load-balance-dns-round-robin/</link>
+      <pubDate>Mon, 22 Jan 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-01-22-load-balance-dns-round-robin/</guid>
+      <description>Bom, eu escrevi load balance para ajudar na pesquisa do Google mas, isso aqui está mais para Round-Robin :) Eu fiz isso com o Bind 9 mas, DNS é DNS, acho que funciona eu qualquer outro, a idéia é bem simples, veja por você mesmo:
+$TTL 3600 @ IN SOA kerberos.quux.com.br. support.quux.com.br. ( 2007091403 ; serial 10800 ; refresh period 1800 ; retry period 2419200 ; expire period 86400) ; minimum TTL period ; @ IN NS kerberos.</description>
+    </item>
+    
+  </channel>
+</rss>

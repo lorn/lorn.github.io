@@ -18,12 +18,12 @@
   </url>
   
   <url>
-    <loc>/tags/dev/</loc>
+    <loc>/categories/dev/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/dev/</loc>
+    <loc>/tags/dev/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
@@ -68,17 +68,12 @@
   </url>
   
   <url>
-    <loc>/tags/books/</loc>
-    <lastmod>2011-05-19T04:46:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/books/</loc>
     <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/writing/</loc>
+    <loc>/tags/books/</loc>
     <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
@@ -88,12 +83,17 @@
   </url>
   
   <url>
-    <loc>/tags/hacker-series/</loc>
-    <lastmod>2011-05-18T01:45:00+00:00</lastmod>
+    <loc>/tags/writing/</loc>
+    <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/hacker-series/</loc>
+    <lastmod>2011-05-18T01:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/hacker-series/</loc>
     <lastmod>2011-05-18T01:45:00+00:00</lastmod>
   </url>
   
@@ -108,12 +108,12 @@
   </url>
   
   <url>
-    <loc>/tags/music/</loc>
+    <loc>/categories/music/</loc>
     <lastmod>2011-04-16T02:59:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/music/</loc>
+    <loc>/tags/music/</loc>
     <lastmod>2011-04-16T02:59:00+00:00</lastmod>
   </url>
   
@@ -133,13 +133,113 @@
   </url>
   
   <url>
+    <loc>/tags/2007/</loc>
+    <lastmod>2007-08-22T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/dicas.txt/</loc>
+    <lastmod>2007-08-22T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/infra/</loc>
+    <lastmod>2007-08-22T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2007-08-22-sitemap-no-google/</loc>
+    <lastmod>2007-08-22T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/old/</loc>
+    <lastmod>2007-08-22T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2007-08-20-skype-offline/</loc>
+    <lastmod>2007-08-20T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2007-08-01-300/</loc>
+    <lastmod>2007-08-01T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/movies/</loc>
+    <lastmod>2007-08-01T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2007-07-23-transformers-o-filme/</loc>
+    <lastmod>2007-08-01T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2007-08-01-zfs-com-oracle/</loc>
+    <lastmod>2007-08-01T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2007-07-23-safari-algum-tempo-depois/</loc>
+    <lastmod>2007-07-23T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/setup/</loc>
+    <lastmod>2007-07-23T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2007-06-13-o-homem-do-castelo-alto/</loc>
+    <lastmod>2007-06-13T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2007-06-12-testando-o-safari/</loc>
+    <lastmod>2007-06-12T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2007-06-08-1-mes-e-meio-depois/</loc>
+    <lastmod>2007-06-08T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/events/</loc>
+    <lastmod>2007-04-17T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2007-04-17-fisl-8/</loc>
+    <lastmod>2007-04-17T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/perl/</loc>
+    <lastmod>2007-04-17T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2007-02-14-sandman-casa-de-bonecas/</loc>
     <lastmod>2007-02-14T14:31:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>/post/2007-01-24-neuromancer/</loc>
+    <lastmod>2007-01-24T14:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2007-01-23-livro-minority-report/</loc>
     <lastmod>2007-01-23T14:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2007-01-22-load-balance-dns-round-robin/</loc>
+    <lastmod>2007-01-22T14:31:00+00:00</lastmod>
   </url>
   
   <url>

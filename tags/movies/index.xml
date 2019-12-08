@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>movies on </title>
+    <link>/tags/movies/</link>
+    <description>Recent content in movies on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 01 Aug 2007 14:31:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/movies/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>300</title>
+      <link>/post/2007-08-01-300/</link>
+      <pubDate>Wed, 01 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-08-01-300/</guid>
+      <description>Assisti 300 em DVD, gostei como toda adaptação dos quadrinhos do Frank Miller, Sin City ficou muito bom também, tinha alguns detalhes a mais, que não tinha nos quadrinhos, mas com certeza foi só para deixar um ar de “sobrenatural”, gostei também do DVD de extras que tem entrevistas com historiadores sobre Esparta, entrevistas com Frank Miller e com o Diretor ( Zack Snyder) .
+De acordo os historiadores para cada “Espartano” tinha 15 escravos (!</description>
+    </item>
+    
+    <item>
+      <title>Transformers, o filme</title>
+      <link>/post/2007-07-23-transformers-o-filme/</link>
+      <pubDate>Wed, 01 Aug 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-07-23-transformers-o-filme/</guid>
+      <description>Eu estava muito ansioso para ver o filme dos Transformers, eu sou da nova geração de Transformers conhecida como “Beast Wars” diria que é um fork do Transformers original, a diferença é que por default eles são animais e não veiculos ,a história também não se passa na terra, mas com o tempo acontecem algumas evoluções e eles acabam virando veiculos com um leve toque animal, não são Autobots e Decepticons, mas são Maximals e Predacons, e os unicos personagens que tem os mesmos nomes são Optimus Prime e Megatron, o resto dos personagens você até consegue fazer uma semelhança com os da série antiga mas tem outros nomes.</description>
+    </item>
+    
+  </channel>
+</rss>
