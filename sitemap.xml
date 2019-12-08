@@ -18,12 +18,12 @@
   </url>
   
   <url>
-    <loc>/categories/dev/</loc>
+    <loc>/tags/dev/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/dev/</loc>
+    <loc>/categories/dev/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
@@ -43,12 +43,12 @@
   </url>
   
   <url>
-    <loc>/tags/talksbyme/</loc>
+    <loc>/categories/talksbyme/</loc>
     <lastmod>2011-12-05T04:01:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/talksbyme/</loc>
+    <loc>/tags/talksbyme/</loc>
     <lastmod>2011-12-05T04:01:00+00:00</lastmod>
   </url>
   
@@ -78,12 +78,12 @@
   </url>
   
   <url>
-    <loc>/categories/writing/</loc>
+    <loc>/tags/writing/</loc>
     <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/writing/</loc>
+    <loc>/categories/writing/</loc>
     <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
@@ -128,7 +128,37 @@
   </url>
   
   <url>
+    <loc>/tags/2009/</loc>
+    <lastmod>2009-01-20T04:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/old/</loc>
+    <lastmod>2009-01-20T04:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/perl/</loc>
+    <lastmod>2009-01-20T04:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2009-01-20-perl-para-sysadmins-e-dbas/</loc>
+    <lastmod>2009-01-20T04:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/perl-para-sysadmins-e-dbas/</loc>
+    <lastmod>2009-01-20T04:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/sysadmin/</loc>
+    <lastmod>2009-01-20T04:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/talks/</loc>
     <lastmod>2009-01-20T04:17:00+00:00</lastmod>
   </url>
   
@@ -149,11 +179,6 @@
   
   <url>
     <loc>/post/2007-08-22-sitemap-no-google/</loc>
-    <lastmod>2007-08-22T14:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/old/</loc>
     <lastmod>2007-08-22T14:31:00+00:00</lastmod>
   </url>
   
@@ -218,8 +243,8 @@
   </url>
   
   <url>
-    <loc>/tags/perl/</loc>
-    <lastmod>2007-04-17T14:31:00+00:00</lastmod>
+    <loc>/post/2007-03-19-soap-quanto-mais-complicado-melhor/</loc>
+    <lastmod>2007-03-19T14:31:00+00:00</lastmod>
   </url>
   
   <url>

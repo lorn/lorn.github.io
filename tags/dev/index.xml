@@ -78,5 +78,15 @@ A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de u
  ZSH, o cara é tão bom que tem um post só para ele :) iTerm2 - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do iTerm2 e vou dizer, deixa o Terminal.</description>
     </item>
     
+    <item>
+      <title>SOAP quanto mais complicado melhor</title>
+      <link>/post/2007-03-19-soap-quanto-mais-complicado-melhor/</link>
+      <pubDate>Mon, 19 Mar 2007 14:31:00 +0000</pubDate>
+      
+      <guid>/post/2007-03-19-soap-quanto-mais-complicado-melhor/</guid>
+      <description>Faz tempo que não faço um post, mas infelizmente esse é de revolta :P . Bom, tudo começou quando um cliente precisou fazer uma integração atraves de um webservice em SOAP, para minha sorte esse webservice foi feito em .Net, aí já viu né? integração 0, beleza!
+Desisti da implantacão, e ai para minha grande sorte morphiana, eis que me aparece outro webservice em SOAP, pelo menos esse não foi feito em .</description>
+    </item>
+    
   </channel>
 </rss>
