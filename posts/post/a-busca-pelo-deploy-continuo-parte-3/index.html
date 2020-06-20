@@ -1,0 +1,194 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <title>lornlab.</title>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="The HTML5 Herald" />
+<meta name="author" content="Lindolfo Rodrigues" /><meta property="og:title" content="A Busca Pelo Deploy Contínuo - Parte 3" />
+<meta property="og:description" content="“It’s a unix system I known this!” arquiteturas unix, forks, sockets e afins funcionam muito bem :)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lornlab.org/posts/post/a-busca-pelo-deploy-continuo-parte-3/" />
+<meta property="article:published_time" content="2011-12-05T04:01:00+00:00" />
+<meta property="article:modified_time" content="2011-12-05T04:01:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A Busca Pelo Deploy Contínuo - Parte 3"/>
+<meta name="twitter:description" content="“It’s a unix system I known this!” arquiteturas unix, forks, sockets e afins funcionam muito bem :)"/>
+
+<meta name="generator" content="Hugo 0.57.2" />
+    
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://lornlab.org/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="https://lornlab.org/css/styles.css" /></head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="https://lornlab.org/">lornlab.</a>
+            </h1>
+
+      <ul id="social-media">
+             <li>
+               <a href="https://github.com/lorn" title="GitHub">
+               <i class="fab fa-github fa-lg"></i>
+               </a>
+             </li>
+             <li>
+               <a href="https://twitter.com/lorn" title="Twitter">
+               <i class="fab fa-twitter fa-lg"></i>
+               </a>
+             </li>
+             <li>
+               <a href="https://linkedin.com/in/lindolfo" title="LinkedIn">
+               <i class="fab fa-linkedin fa-lg"></i>
+               </a>
+             </li>
+      </ul>
+      
+      <p><em>Thoughts, stories and ideas</em></p>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+    </ul>
+</nav>
+
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>A Busca Pelo Deploy Contínuo - Parte 3</h1>
+
+    
+      <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2011-12-05T04:01:00Z">Dec 5, 2011</time>
+        </li>
+        
+        <li>
+            Categories:
+            <em>
+                
+                    
+                    <a href="https://lornlab.org/categories/dev">dev</a>
+                
+                    , 
+                    <a href="https://lornlab.org/categories/talksbyme">talksbyme</a>
+                
+            </em>
+        </li>
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="https://lornlab.org/tags/dev">#dev</a>
+                
+                    , 
+                    <a href="https://lornlab.org/tags/talksbyme">#talksbyme</a>
+                
+            </em>
+        </li>
+        
+
+        <li>2 minutes read</li>
+    </ul>
+</aside>
+
+    
+
+    
+
+
+    
+
+<p>Você está lendo a Parte 3 sobre &ldquo;A Busca pelo deploy contínuo&rdquo; eu recomendo você a começar pela <a href="https://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-1/">Parte 1</a> e depois ler a <a href="https://lornlab.org/blog/2011/12/02/a-busca-pelo-deploy-continuo-parte-2/">Parte 2</a> se você já o fez, continue ;)</p>
+
+<p>Agora um exemplo de arquitetura para facilitar o uso do deploy continuo usando um <a href="http://en.wikipedia.org/wiki/Load_balancing_(computing)">Load Balancer</a>.</p>
+
+<p>Você não precisa de applicances milionários para fazer isso <a href="http://www.anchor.com.au/blog/2009/10/load-balancing-at-github-why-ldirectord/">o github</a>, serve 2500 conexões TCP por <strong>SEGUNDO</strong> usando o <a href="http://horms.net/projects/ldirectord/">ldirectord</a> em uma máquina Xen com 128mb.</p>
+
+<p>Com um Load Balance, você consegue testar funcionalidades novas no  site para uma pequena porção dos usuários do site e usar os gráficos (  que você já tem lógico ) para ver se ela é boa ou não.</p>
+
+<p>Como fazer isso? faça o deploy para apenas 1 das ‘n’ máquinas que  você tem atrás do Load Balancer e redirecione, 5% ~ 10% das suas  conexões dos seus usuários para essa máquina, o resto os gráficos que  você preparou da sua aplicação irão te dizer ;)</p>
+
+<p>Falando um pouco mais de arquitetura, e especificamente de Perl, eu  gosto bastante de usar o Nginx + Starman a comunicação é feita via Unix  Socket o Starman foi baseado no Unicorn do Ruby, ele funciona muito bem  e…</p>
+
+<p>“It’s a unix system I known this!” arquiteturas unix, forks, sockets e afins funcionam muito bem :)</p>
+
+<p>O seu deploy consistiria em copiar os arquivos novos e mandar um sinal de reset para o pid do Starman:</p>
+
+<p><code>$ kill -s USR2 1337</code></p>
+
+<p>Ele vai recarregar o código, e vai reiniciar todos os seus fork assim  que eles forem ficando sem conexões ou seja para seus usuários a  percepção de downtime será <strong>ZERO!</strong></p>
+
+<p>Bom, basicamente é isso se tiver alguma duvida pergunte nos comentários :)</p>
+
+<h2 id="bibliografia">Bibliografia</h2>
+
+<p>Alguns slides foram copiados dessa palestra da etsy:</p>
+
+<p><strong><a href="https://www.slideshare.net/OReillyOSCON/put-a-button-on-it-removing-barriers-to-going-fast">Put a Button on It: Removing Barriers to Going Fast</a></strong> View more presentations from <a href="https://www.slideshare.net/OReillyOSCON">OSCON</a></p>
+
+<p>E outros foram copiados dessa palestra da AOE Media</p>
+
+<p><strong><a href="https://www.slideshare.net/typo3media/continuous-deployment-5345889">Continuous deployment</a></strong> View more <a href="https://www.slideshare.net/">presentations</a> from <a href="https://www.slideshare.net/typo3media">Daniel</a></p>
+
+<p>Obrigado :)</p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="https://lornlab.org/posts/post/a-busca-pelo-deploy-continuo-parte-2/"><i class="fa fa-chevron-circle-left"></i> A Busca Pelo Deploy Contínuo - Parte 2</a>
+        </li>
+        
+        
+        <li>
+            <a href="https://lornlab.org/posts/debugging-http-request-with-netcat/">Debugging HTTP Request With Netcat <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+  
+    
+    
+  
+
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright &copy; 2019 - Author Name |
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://lornlab.org/index.xml">Subscribe </a></h6>
+    </footer>
+</div>
+<script src="https://lornlab.org/js/scripts.js"></script>
+
+</body>
+
+</html>
+

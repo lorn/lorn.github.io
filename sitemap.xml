@@ -3,283 +3,297 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
+    <loc>https://lornlab.org/categories/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://lornlab.org/tags/debug/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/debugging-http-request-with-netcat/</loc>
+    <loc>https://lornlab.org/posts/debugging-http-request-with-netcat/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/dev/</loc>
+    <loc>https://lornlab.org/tags/dev/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/dev/</loc>
+    <loc>https://lornlab.org/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>https://lornlab.org/posts/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://lornlab.org/tags/shell/</loc>
     <lastmod>2012-06-28T23:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/a-busca-pelo-deploy-continuo-parte-3/</loc>
+    <loc>https://lornlab.org/tags/</loc>
+    <lastmod>2012-06-28T23:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lornlab.org/categories/tech/</loc>
+    <lastmod>2012-06-28T23:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lornlab.org/posts/post/a-busca-pelo-deploy-continuo-parte-3/</loc>
     <lastmod>2011-12-05T04:01:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/talksbyme/</loc>
+    <loc>https://lornlab.org/categories/dev/</loc>
     <lastmod>2011-12-05T04:01:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/talksbyme/</loc>
+    <loc>https://lornlab.org/categories/talksbyme/</loc>
     <lastmod>2011-12-05T04:01:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/a-busca-pelo-deploy-continuo-parte-2/</loc>
+    <loc>https://lornlab.org/tags/talksbyme/</loc>
+    <lastmod>2011-12-05T04:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lornlab.org/posts/post/a-busca-pelo-deploy-continuo-parte-2/</loc>
     <lastmod>2011-12-03T03:57:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/a-busca-pelo-deploy-continuo-parte-1/</loc>
+    <loc>https://lornlab.org/posts/post/a-busca-pelo-deploy-continuo-parte-1/</loc>
     <lastmod>2011-12-03T01:23:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/a-biblioteca-pessoal-de-neil-gaiman/</loc>
+    <loc>https://lornlab.org/posts/post/a-biblioteca-pessoal-de-neil-gaiman/</loc>
     <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/books/</loc>
+    <loc>https://lornlab.org/categories/books/</loc>
     <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/books/</loc>
+    <loc>https://lornlab.org/tags/books/</loc>
     <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/writing/</loc>
+    <loc>https://lornlab.org/tags/writing/</loc>
     <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/writing/</loc>
+    <loc>https://lornlab.org/categories/writing/</loc>
     <lastmod>2011-05-19T04:46:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/hacker-series/</loc>
+    <loc>https://lornlab.org/categories/hacker-series/</loc>
     <lastmod>2011-05-18T01:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/hacker-series/</loc>
+    <loc>https://lornlab.org/tags/hacker-series/</loc>
     <lastmod>2011-05-18T01:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</loc>
+    <loc>https://lornlab.org/posts/post/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</loc>
     <lastmod>2011-05-18T01:45:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/como-funciona-a-escala-pentatonica/</loc>
+    <loc>https://lornlab.org/posts/post/como-funciona-a-escala-pentatonica/</loc>
     <lastmod>2011-04-16T02:59:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/music/</loc>
+    <loc>https://lornlab.org/tags/music/</loc>
     <lastmod>2011-04-16T02:59:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/music/</loc>
+    <loc>https://lornlab.org/categories/music/</loc>
     <lastmod>2011-04-16T02:59:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/meu-ambiente-de-trabalho-em-n-itens/</loc>
+    <loc>https://lornlab.org/posts/post/meu-ambiente-de-trabalho-em-n-itens/</loc>
     <lastmod>2011-04-12T17:59:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/usando-zsh/</loc>
+    <loc>https://lornlab.org/posts/post/usando-zsh/</loc>
     <lastmod>2011-04-12T05:24:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/2009/</loc>
+    <loc>https://lornlab.org/tags/2009/</loc>
     <lastmod>2009-01-20T04:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/old/</loc>
+    <loc>https://lornlab.org/tags/old/</loc>
     <lastmod>2009-01-20T04:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/perl/</loc>
+    <loc>https://lornlab.org/tags/perl/</loc>
     <lastmod>2009-01-20T04:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2009-01-20-perl-para-sysadmins-e-dbas/</loc>
+    <loc>https://lornlab.org/posts/post/2009-01-20-perl-para-sysadmins-e-dbas/</loc>
     <lastmod>2009-01-20T04:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/perl-para-sysadmins-e-dbas/</loc>
+    <loc>https://lornlab.org/posts/post/perl-para-sysadmins-e-dbas/</loc>
     <lastmod>2009-01-20T04:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/sysadmin/</loc>
+    <loc>https://lornlab.org/tags/sysadmin/</loc>
     <lastmod>2009-01-20T04:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/talks/</loc>
+    <loc>https://lornlab.org/tags/talks/</loc>
     <lastmod>2009-01-20T04:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/2007/</loc>
+    <loc>https://lornlab.org/tags/2007/</loc>
     <lastmod>2007-08-22T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/dicas.txt/</loc>
+    <loc>https://lornlab.org/tags/dicas.txt/</loc>
     <lastmod>2007-08-22T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/infra/</loc>
+    <loc>https://lornlab.org/tags/infra/</loc>
     <lastmod>2007-08-22T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-08-22-sitemap-no-google/</loc>
+    <loc>https://lornlab.org/posts/post/2007-08-22-sitemap-no-google/</loc>
     <lastmod>2007-08-22T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-08-20-skype-offline/</loc>
+    <loc>https://lornlab.org/posts/post/2007-08-20-skype-offline/</loc>
     <lastmod>2007-08-20T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-08-01-300/</loc>
+    <loc>https://lornlab.org/posts/post/2007-08-01-300/</loc>
     <lastmod>2007-08-01T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/movies/</loc>
+    <loc>https://lornlab.org/tags/movies/</loc>
     <lastmod>2007-08-01T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-07-23-transformers-o-filme/</loc>
+    <loc>https://lornlab.org/posts/post/2007-07-23-transformers-o-filme/</loc>
     <lastmod>2007-08-01T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-08-01-zfs-com-oracle/</loc>
+    <loc>https://lornlab.org/posts/post/2007-08-01-zfs-com-oracle/</loc>
     <lastmod>2007-08-01T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-07-23-safari-algum-tempo-depois/</loc>
+    <loc>https://lornlab.org/posts/post/2007-07-23-safari-algum-tempo-depois/</loc>
     <lastmod>2007-07-23T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/setup/</loc>
+    <loc>https://lornlab.org/tags/setup/</loc>
     <lastmod>2007-07-23T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-06-13-o-homem-do-castelo-alto/</loc>
+    <loc>https://lornlab.org/posts/post/2007-06-13-o-homem-do-castelo-alto/</loc>
     <lastmod>2007-06-13T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-06-12-testando-o-safari/</loc>
+    <loc>https://lornlab.org/posts/post/2007-06-12-testando-o-safari/</loc>
     <lastmod>2007-06-12T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-06-08-1-mes-e-meio-depois/</loc>
+    <loc>https://lornlab.org/posts/post/2007-06-08-1-mes-e-meio-depois/</loc>
     <lastmod>2007-06-08T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/events/</loc>
+    <loc>https://lornlab.org/tags/events/</loc>
     <lastmod>2007-04-17T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-04-17-fisl-8/</loc>
+    <loc>https://lornlab.org/posts/post/2007-04-17-fisl-8/</loc>
     <lastmod>2007-04-17T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-03-19-soap-quanto-mais-complicado-melhor/</loc>
+    <loc>https://lornlab.org/posts/post/2007-03-19-soap-quanto-mais-complicado-melhor/</loc>
     <lastmod>2007-03-19T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-02-14-sandman-casa-de-bonecas/</loc>
+    <loc>https://lornlab.org/posts/post/2007-02-14-sandman-casa-de-bonecas/</loc>
     <lastmod>2007-02-14T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-01-24-neuromancer/</loc>
+    <loc>https://lornlab.org/posts/post/2007-01-24-neuromancer/</loc>
     <lastmod>2007-01-24T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-01-23-livro-minority-report/</loc>
+    <loc>https://lornlab.org/posts/post/2007-01-23-livro-minority-report/</loc>
     <lastmod>2007-01-23T14:18:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2007-01-22-load-balance-dns-round-robin/</loc>
+    <loc>https://lornlab.org/posts/post/2007-01-22-load-balance-dns-round-robin/</loc>
     <lastmod>2007-01-22T14:31:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2006-11-21-relato-conilsi-yapc-sa-2006/</loc>
+    <loc>https://lornlab.org/posts/post/2006-11-21-relato-conilsi-yapc-sa-2006/</loc>
     <lastmod>2006-11-21T14:06:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/fisl-7-0/</loc>
+    <loc>https://lornlab.org/posts/post/fisl-7-0/</loc>
     <lastmod>2006-04-19T20:23:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
-    <priority>0</priority>
+    <loc>https://lornlab.org/about/</loc>
   </url>
   
 </urlset>
