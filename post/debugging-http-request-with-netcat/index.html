@@ -1,370 +1,530 @@
 <!DOCTYPE html>
-<html lang="en-US" />
-<head>
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-    <title>Debugging HTTP Request With Netcat &middot; </title>
-
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="canonical" href="/post/debugging-http-request-with-netcat/" />
-
-     <meta name="description" content="O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl." /> 
-
-     
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
     
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image" content="/images/2019/02/Netcat_o.jpg"/>
-    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
  
-    <meta name="twitter:title" content="Debugging HTTP Request With Netcat"/>
-    <meta name="twitter:description" content="O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl."/>
-    <meta name="twitter:url" content="/post/debugging-http-request-with-netcat/" />
-    <meta name="twitter:site" content="@lorn"/>
 
-    <meta property="og:site_name" content="" />
-    <meta property="og:title" content="Debugging HTTP Request With Netcat &middot; lornlab." />
-    <meta property="og:url" content="/post/debugging-http-request-with-netcat/" />
+
+      <title>Debugging HTTP Request With Netcat - </title>
+
+  <meta name="description" content="O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.">
+  <meta name="author" content="Lindolfo Lorn Rodrigues"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "lornlab.",
     
+    "url": "https:\/\/lornlab.org"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/lornlab.org"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/lornlab.org",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/lornlab.org\/post\/debugging-http-request-with-netcat\/",
+          "name": "Debugging HTTP request with netcat"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Lindolfo Rodrigues"
+  },
+  "headline": "Debugging HTTP Request With Netcat",
+  "description" : "O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.",
+  "inLanguage" : "en",
+  "wordCount":  237 ,
+  "datePublished" : "2012-06-28T23:45:00",
+  "dateModified" : "2012-06-28T23:45:00",
+  "image" : "https:\/\/lornlab.org\/img\/avatar-icon.png",
+  "keywords" : [ "dev, debug, shell" ],
+  "mainEntityOfPage" : "https:\/\/lornlab.org\/post\/debugging-http-request-with-netcat\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/lornlab.org",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/lornlab.org\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-    <meta property="og:type" content="article" />
-    <meta property="og:description" content="O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl." />
+<meta property="og:title" content="Debugging HTTP Request With Netcat" />
+<meta property="og:description" content="O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.">
+<meta property="og:image" content="https://lornlab.org/images/2019/02/Netcat_o.jpg" />
+<meta property="og:url" content="https://lornlab.org/post/debugging-http-request-with-netcat/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="lornlab." />
 
-    <meta property="article:published_time" content="2012-06-28T23:45:00Z" />
-    <meta property="article:tag" content="dev" />
+  <meta name="twitter:title" content="Debugging HTTP Request With Netcat" />
+  <meta name="twitter:description" content="O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.">
+  <meta name="twitter:image" content="https://lornlab.org/images/2019/02/Netcat_o.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@lorn" />
+  <meta name="twitter:creator" content="@lorn" />
+  <link href='https://lornlab.org/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.111.3">
+  <link rel="alternate" href="https://lornlab.org/index.xml" type="application/rss+xml" title="lornlab."><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="https://lornlab.org/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://lornlab.org/css/highlight.min.css" /><link rel="stylesheet" href="https://lornlab.org/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
-    <meta property="og:image" content="/images/2019/02/Netcat_o.jpg"/>
 
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://lornlab.org">lornlab.</a>
+    </div>
 
-    <meta name="generator" content="Hugo 0.57.2" />
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="/built/screen.css" /> 
-    <link rel="stylesheet" type="text/css" href="/css/casper-two.css" /> 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+        
+
+        
+      </ul>
+    </div>
+
     
-
-     
-
-</head>
-
-
-<body class="post-template">
-  <div class="site-wrapper"> 
-
-<header class="site-header outer">
-  <div class="inner">
-    <nav class="site-nav">
-      <div class="site-nav-left">
-
-        <ul class="nav" role="menu">
-        
-        
-        
-            <li class="" role="menuitem">
-              <a href="/">Home</a>
-            </li>
-        
-            <li class="" role="menuitem">
-              <a href="/tags/">TAG</a>
-            </li>
-        
-      </ul></div>
-
-      <div class="site-nav-right">
-        <div class="social-links">
-                    
-
-                    <a class="social-link social-link-tw" href="https://twitter.com/lorn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg></a>
-
-                    <a class="social-link" href="https://github.com/lorn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
-
-                    
-
-                    
-        </div>  
-            
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="lornlab." href="https://lornlab.org">
+            <img class="avatar-img" src="https://lornlab.org/img/avatar-icon.png" alt="lornlab." />
+          </a>
+        </div>
       </div>
-
-    </nav>  
+    
 
   </div>
-</header>
+</nav>
 
-<main id="site-main" class="site-main outer" role="main">
-  <div class="inner">
-    
-      <article class="post-full post"> 
-    <header class="post-full-header">
-        <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2012-06-28">28 June 2012</time>
-                <span class="date-divider">/</span> <a href="/tags/dev/">#dev</a>&nbsp;
-        </section>
-        <h1 class="post-full-title">Debugging HTTP Request With Netcat</h1>
-    </header>
-    
-    <figure class="post-full-image" style="background-image: url(/images/2019/02/Netcat_o.jpg)">
-    </figure>
 
-    <section class="post-full-content">
-        <div class="kg-card-markdown">
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Debugging HTTP Request With Netcat</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on June 28, 2012
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;237&nbsp;words
+  
+  
+    
+      
+        &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Lindolfo Rodrigues
+      
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
         <p>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.</p>
-
 <p><code>$ curl https://api.github.com/repos/lorn/lwp-curl/commits</code></p>
-
 <p>Mas quando você vai para sua linguagem botar a mão na massa, dá erro:</p>
-
-<pre><code>$ curl &quot;https://api.github.com/repos1/lorn/lwp-curl/commits1&quot;
-
-{
-  &quot;message&quot;: &quot;Not Found&quot;
-}
-</code></pre>
-
-<p>é claro que nem sempre o erro será tão claro, e principalmente quando  você está fazendo POST/PUT com arquivos, como debugar? porque funciona  no curl e não funciona na minha linguagem preferida?</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ curl &#34;https://api.github.com/repos1/lorn/lwp-curl/commits1&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;message&#34;: &#34;Not Found&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>é claro que nem sempre o erro será tão claro, e principalmente quando  você está fazendo POST/PUT com arquivos, como debugar? porque funciona  no curl e não funciona na minha linguagem preferida?</p>
 <blockquote>
 <p>Netcat for the rescue!</p>
 </blockquote>
-
 <p>Netcat é o canivete suiço do mundo unix, se você nunca ouviu falar e  quer aprender até a transferir arquivos via Netcat (!!) veja esse post  do <a href="http://www.catonmat.net/blog/unix-utilities-netcat/">pkrumins</a> nesse caso especifico, vamos usar Netcat para debugar requisições HTTP e isso ele não mostra lá ;)</p>
-
 <p>Essa requisição do curl:</p>
-
 <p><code>$ curl &quot;localhost:9999/repos/lorn/lwp-curl/commits&quot;</code></p>
-
 <p>Aparece assim no Netcat</p>
-
-<pre><code>$ nc -l localhost 9999
-GET /repos/lorn/lwp-curl/commits HTTP/1.1
-User-Agent: curl/7.21.4 (universal-apple-darwin11.0) libcurl/7.21.4 OpenSSL/0.9.8r zlib/1.2.5
-Host: localhost:9999
-Accept: */*
-</code></pre>
-
-<p>Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o  Netcat - localhost:9999 nesse exemplo - e veja a diferença entre o  ‘debug’ do nc, para quando a requisição vem do curl, e o ‘debug’ do nc  para quando a requisição vem da sua aplicação, no meu caso eu tinha  esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ nc -l localhost 9999
+</span></span><span class="line"><span class="cl">GET /repos/lorn/lwp-curl/commits HTTP/1.1
+</span></span><span class="line"><span class="cl">User-Agent: curl/7.21.4 (universal-apple-darwin11.0) libcurl/7.21.4 OpenSSL/0.9.8r zlib/1.2.5
+</span></span><span class="line"><span class="cl">Host: localhost:9999
+</span></span><span class="line"><span class="cl">Accept: */*
+</span></span></code></pre></div><p>Agora ao invés de usar o curl, faça sua aplicação fazer o POST/PUT para o  Netcat - localhost:9999 nesse exemplo - e veja a diferença entre o  ‘debug’ do nc, para quando a requisição vem do curl, e o ‘debug’ do nc  para quando a requisição vem da sua aplicação, no meu caso eu tinha  esquecido de enviar o arquivo usando <a href="http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html">HTTP Multipart</a>.</p>
 <p>Para usar o Netcat no Mac/BSD:</p>
-
 <p><code>$ nc -l localhost 9999</code></p>
-
 <p>Linux:</p>
-
 <p><code>nc -l -p 9999</code></p>
-    
-        </div>
-    </section>
 
-    <footer class="post-full-footer">
-      <section class="author-card">
-        <img class="author-profile-image" src="https://www.gravatar.com/avatar/362b77d943afe986bc6ead2bf11d0e3f" alt="Author" />
-        <section class="author-card-content">
-            <h4 class="author-card-name"><a href="/">Lindolfo Rodrigues</a></h4>
-                <p>Describe yourself..</p>
-        </section>
-      </section>
-    </footer>
-</article>
-    
-    
-    
 
+        
+          <div class="blog-tags">
+            
+              <a href="https://lornlab.org/tags/dev/">dev</a>&nbsp;
+            
+              <a href="https://lornlab.org/tags/debug/">debug</a>&nbsp;
+            
+              <a href="https://lornlab.org/tags/shell/">shell</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2flornlab.org%2fpost%2fdebugging-http-request-with-netcat%2f&amp;text=Debugging%20HTTP%20Request%20With%20Netcat&amp;via=lorn" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flornlab.org%2fpost%2fdebugging-http-request-with-netcat%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2flornlab.org%2fpost%2fdebugging-http-request-with-netcat%2f&amp;title=Debugging%20HTTP%20Request%20With%20Netcat" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2flornlab.org%2fpost%2fdebugging-http-request-with-netcat%2f&amp;title=Debugging%20HTTP%20Request%20With%20Netcat" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2flornlab.org%2fpost%2fdebugging-http-request-with-netcat%2f&amp;title=Debugging%20HTTP%20Request%20With%20Netcat" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2flornlab.org%2fpost%2fdebugging-http-request-with-netcat%2f&amp;description=Debugging%20HTTP%20Request%20With%20Netcat" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
   </div>
-</main>
+  
 
+              </div>
+            </section>
+        
 
-<aside class="read-next outer">
-  <div class="inner">
-    <div class="read-next-feed">      
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/post/a-busca-pelo-deploy-continuo-parte-3/">A Busca Pelo Deploy Contínuo - Parte 3</a></li>
+                
+                    <li><a href="/post/post/a-busca-pelo-deploy-continuo-parte-2/">A Busca Pelo Deploy Contínuo - Parte 2</a></li>
+                
+                    <li><a href="/post/post/a-busca-pelo-deploy-continuo-parte-1/">A Busca Pelo Deploy Contínuo - Parte 1</a></li>
+                
+                    <li><a href="/post/post/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/">Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick</a></li>
+                
+                    <li><a href="/post/post/meu-ambiente-de-trabalho-em-n-itens/">Meu Ambiente De Trabalho Em N Itens</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
       
-<article class="read-next-card" 
-            style="background-image: url(/img/blog-cover.jpg);" >
-    <header class="read-next-card-header">
-        <small class="read-next-card-header-sitetitle">&mdash; lornlab. &mdash;</small>
-        
-        <h3 class="read-next-card-header-title"><a href="/tags/dev/">#dev</a></h3>
-    </header>
-    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
-    </div>
-
-    <div class="read-next-card-content">
-      
-        <ul>
-          <li><a href="/post/2007-08-20-skype-offline/">Skype offline</a></li>            
-        
-          <li><a href="/post/2007-08-01-300/">300</a></li>            
-        
-          <li><a href="/post/2007-06-08-1-mes-e-meio-depois/">1 mês e meio depois</a></li>            
-        
-          <li><a href="/post/2007-03-19-soap-quanto-mais-complicado-melhor/">SOAP quanto mais complicado melhor</a></li>            
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://lornlab.org/post/post/a-busca-pelo-deploy-continuo-parte-3/" data-toggle="tooltip" data-placement="top" title="A Busca Pelo Deploy Contínuo - Parte 3">&larr; Previous Post</a>
+            </li>
+          
+          
         </ul>
-    </div>
-    <footer class="read-next-card-footer">
       
-        <a href="/tags/dev/">See all related posts →</a>
-    </footer>
-</article>
 
 
       
+        
+        
       
-      <article class="post-card post"> 
-    
-    <a class="post-card-image-link" href="/post/a-busca-pelo-deploy-continuo-parte-3/">
-      <div class="post-card-image" style="background-image: url(/images/2019/02/placa-decorativa-harry-potter-mapa-decoracao.jpg)"></div>
-    </a>
-    
 
-    <div class="post-card-content">
-      <a class="post-card-content-link" href="/post/a-busca-pelo-deploy-continuo-parte-3/">
-          <header class="post-card-header">
-              <span class="post-card-tags">
-              #dev 
-              #talksbyme  </span>
-              
-              <h2 class="post-card-title">A Busca Pelo Deploy Contínuo - Parte 3</h2>
-          </header>
-          <section class="post-card-excerpt">
-               
-                <p>“It’s a unix system I known this!” arquiteturas unix, forks, sockets e afins funcionam muito bem :)</p>
-              
-          </section>
-      </a>
-
-      <footer class="post-card-meta">
-          <img class="author-profile-image" src="https://www.gravatar.com/avatar/362b77d943afe986bc6ead2bf11d0e3f" alt="Author" />
-          <span class="post-card-author"><a href="/">Lindolfo Rodrigues</a></span>
-      </footer>
-    </div>
-</article>
-      
     </div>
   </div>
-</aside>
-
-<div class="floating-header">
-  <div class="floating-header-logo">
-    <a href="/">
-      
-      <span></span>
-    </a>
-  </div>
-  <span class="floating-header-divider">&mdash;</span>
-  <div class="floating-header-title">Debugging HTTP Request With Netcat</div>
-  <div class="floating-header-share">
-    <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
-    </div>
-    
-    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Debugging%20HTTP%20Request%20With%20Netcat&amp;url=%2fpost%2fdebugging-http-request-with-netcat%2f"
-          onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
-      </a>
-      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fdebugging-http-request-with-netcat%2f"
-          onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
-      </a>
-  </div>
-
-  <progress class="progress" value="0">
-    <div class="progress-container">
-      <span class="progress-bar"></span>
-    </div>
-  </progress>
 </div>
 
-
-
-<footer class="site-footer outer">
-  <div class="site-footer-content inner">
-    <section class="copyright" style="line-height: 1.3em;">
-      <a href="/"></a>  <br>
       
-    </section>
-    <nav class="site-footer-nav">
-        <a href="/">Latest Posts</a>
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="https://github.com/lorn" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://gitlab.com/lorn" title="GitLab">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://twitter.com/lorn" title="Twitter">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://linkedin.com/in/lorn" title="LinkedIn">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a rel="me"href="https://mastodon.xyz/@lorn" title="Mastodon">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="lornlab.org">Lindolfo Lorn Rodrigues</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2012
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://lornlab.org">lornlab.</a>
+          
+        </p>
         
-        <a href="https://twitter.com/lorn" target="_blank" rel="noopener">Twitter</a>
-        <a href="https://github.com/lorn" target="_blank" rel="noopener">Github</a>
-        
-        
-    </nav>  
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.111.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
   </div>
-</footer>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-</div>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-
-
-    <script>
+<script src="https://lornlab.org/js/main.js"></script>
+<script src="https://lornlab.org/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lornlab.org/js/load-photoswipe.js"></script>
 
 
 
 
 
-$(document).ready(function () {
+
+
+
+
     
-    var $postContent = $(".post-full-content");
-    $postContent.fitVids();
-    
+  </body>
+</html>
 
-    var progressBar = document.querySelector('progress');
-    var header = document.querySelector('.floating-header');
-    var title = document.querySelector('.post-full-title');
-
-    var lastScrollY = window.scrollY;
-    var lastWindowHeight = window.innerHeight;
-    var lastDocumentHeight = $(document).height();
-    var ticking = false;
-
-    function onScroll() {
-        lastScrollY = window.scrollY;
-        requestTick();
-    }
-
-    function onResize() {
-        lastWindowHeight = window.innerHeight;
-        lastDocumentHeight = $(document).height();
-        requestTick();
-    }
-
-    function requestTick() {
-        if (!ticking) {
-            requestAnimationFrame(update);
-        }
-        ticking = true;
-    }
-
-    function update() {
-        var trigger = title.getBoundingClientRect().top + window.scrollY;
-        var triggerOffset = title.offsetHeight + 35;
-        var progressMax = lastDocumentHeight - lastWindowHeight;
-
-        
-        if (lastScrollY >= trigger + triggerOffset) {
-            header.classList.add('floating-active');
-        } else {
-            header.classList.remove('floating-active');
-        }
-
-        progressBar.setAttribute('max', progressMax);
-        progressBar.setAttribute('value', lastScrollY);
-
-        ticking = false;
-    }
-
-    window.addEventListener('scroll', onScroll, {passive: true});
-    window.addEventListener('resize', onResize, false);
-
-    update();
-});
-</script>
-</body></html>

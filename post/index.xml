@@ -1,34 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on </title>
-    <link>/post/</link>
-    <description>Recent content in Posts on </description>
+    <title>Posts on lornlab.</title>
+    <link>https://lornlab.org/post/</link>
+    <description>Recent content in Posts on lornlab.</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Thu, 28 Jun 2012 23:45:00 +0000</lastBuildDate>
-    
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 28 Jun 2012 23:45:00 +0000</lastBuildDate><atom:link href="https://lornlab.org/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Debugging HTTP Request With Netcat</title>
-      <link>/post/debugging-http-request-with-netcat/</link>
+      <link>https://lornlab.org/post/debugging-http-request-with-netcat/</link>
       <pubDate>Thu, 28 Jun 2012 23:45:00 +0000</pubDate>
       
-      <guid>/post/debugging-http-request-with-netcat/</guid>
+      <guid>https://lornlab.org/post/debugging-http-request-with-netcat/</guid>
       <description>O que fazer quando você precisa usar uma API de terceiros e tudo funciona bem quando você está fazendo seus testes com curl.
 $ curl https://api.github.com/repos/lorn/lwp-curl/commits
 Mas quando você vai para sua linguagem botar a mão na massa, dá erro:
-$ curl &amp;quot;https://api.github.com/repos1/lorn/lwp-curl/commits1&amp;quot; { &amp;quot;message&amp;quot;: &amp;quot;Not Found&amp;quot; }  é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar? porque funciona no curl e não funciona na minha linguagem preferida?</description>
+$ curl &amp;#34;https://api.github.com/repos1/lorn/lwp-curl/commits1&amp;#34; { &amp;#34;message&amp;#34;: &amp;#34;Not Found&amp;#34; } é claro que nem sempre o erro será tão claro, e principalmente quando você está fazendo POST/PUT com arquivos, como debugar? porque funciona no curl e não funciona na minha linguagem preferida?</description>
     </item>
     
     <item>
       <title>A Busca Pelo Deploy Contínuo - Parte 3</title>
-      <link>/post/a-busca-pelo-deploy-continuo-parte-3/</link>
+      <link>https://lornlab.org/post/post/a-busca-pelo-deploy-continuo-parte-3/</link>
       <pubDate>Mon, 05 Dec 2011 04:01:00 +0000</pubDate>
       
-      <guid>/post/a-busca-pelo-deploy-continuo-parte-3/</guid>
+      <guid>https://lornlab.org/post/post/a-busca-pelo-deploy-continuo-parte-3/</guid>
       <description>Você está lendo a Parte 3 sobre &amp;ldquo;A Busca pelo deploy contínuo&amp;rdquo; eu recomendo você a começar pela Parte 1 e depois ler a Parte 2 se você já o fez, continue ;)
 Agora um exemplo de arquitetura para facilitar o uso do deploy continuo usando um Load Balancer.
 Você não precisa de applicances milionários para fazer isso o github, serve 2500 conexões TCP por SEGUNDO usando o ldirectord em uma máquina Xen com 128mb.</description>
@@ -36,33 +31,32 @@ Você não precisa de applicances milionários para fazer isso o github, serve 2
     
     <item>
       <title>A Busca Pelo Deploy Contínuo - Parte 2</title>
-      <link>/post/a-busca-pelo-deploy-continuo-parte-2/</link>
+      <link>https://lornlab.org/post/post/a-busca-pelo-deploy-continuo-parte-2/</link>
       <pubDate>Sat, 03 Dec 2011 03:57:00 +0000</pubDate>
       
-      <guid>/post/a-busca-pelo-deploy-continuo-parte-2/</guid>
+      <guid>https://lornlab.org/post/post/a-busca-pelo-deploy-continuo-parte-2/</guid>
       <description>Você está lendo a Parte 2 sobre &amp;ldquo;A Busca pelo deploy contínuo&amp;rdquo; eu recomendo você a começar pela Parte 1 mas se já leu as duas partes, leia a Parte 3.
 Agora que você já está convencido que precisa disso, ou não, vou começar a falar de algumas ferramentas/técnicas que você pode usar para te ajudar no processo:
- SCM - Software Configuration Management  Também conhecido como VCS ( Version Control System ), você precisa disso, se você não tem há algo muito errado e se você está usando Subversion, isso não é tão ruim, mas comece a usar git a partir de hoje, sério.</description>
+SCM - Software Configuration Management Também conhecido como VCS ( Version Control System ), você precisa disso, se você não tem há algo muito errado e se você está usando Subversion, isso não é tão ruim, mas comece a usar git a partir de hoje, sério.</description>
     </item>
     
     <item>
       <title>A Busca Pelo Deploy Contínuo - Parte 1</title>
-      <link>/post/a-busca-pelo-deploy-continuo-parte-1/</link>
+      <link>https://lornlab.org/post/post/a-busca-pelo-deploy-continuo-parte-1/</link>
       <pubDate>Sat, 03 Dec 2011 01:23:00 +0000</pubDate>
       
-      <guid>/post/a-busca-pelo-deploy-continuo-parte-1/</guid>
+      <guid>https://lornlab.org/post/post/a-busca-pelo-deploy-continuo-parte-1/</guid>
       <description>Você está lendo a Parte 1 sobre &amp;ldquo;A Busca pelo deploy contínuo&amp;rdquo; esse post tem mais duas continuações: Parte 2 e Parte 3.
 No dia 05/11 apresentei no YAPC::Brasil uma palestra com o nome “Em busca do deploy continuo” nesse post vou tentar descrever sobre tudo o que eu falei.
-  A busca pelo deploy continuo  from Lindolfo Rodrigues Oliveira Neto 
 Como começar? Infelizmente o principal problema do “Deploy Continuo” não é técnico e sim cultural, e mudança de cultura é muito mais difícil que mudança de Banco de Dados ou de Linguagem de Programação é enraizado nas fundações da empresa, esses são alguns exemplos culturais:</description>
     </item>
     
     <item>
       <title>A Biblioteca Pessoal De Neil Gaiman</title>
-      <link>/post/a-biblioteca-pessoal-de-neil-gaiman/</link>
+      <link>https://lornlab.org/post/post/a-biblioteca-pessoal-de-neil-gaiman/</link>
       <pubDate>Thu, 19 May 2011 04:46:00 +0000</pubDate>
       
-      <guid>/post/a-biblioteca-pessoal-de-neil-gaiman/</guid>
+      <guid>https://lornlab.org/post/post/a-biblioteca-pessoal-de-neil-gaiman/</guid>
       <description>Já tinha lido alguma entrevista do Donald Knuth em que ele falava que tinha a mesma poltrona desde 1960 e só trocava o forro externo e então, eu percebi que precisava comprar uma poltrona para ler livros :)
 Ainda estou a procura, aquelas que tem na Starbucks é tudo importada :/ estou procurando algum clone brasileiro delas, mas acho que não vai ser fácil achar.
 Bom, voltando ao título olha como é a biblioteca pessoal do Neil Gaiman!</description>
@@ -70,51 +64,51 @@ Bom, voltando ao título olha como é a biblioteca pessoal do Neil Gaiman!</desc
     
     <item>
       <title>Hackers Que Você Deveria Conhecer (1): Brad Fitzpatrick</title>
-      <link>/post/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</link>
+      <link>https://lornlab.org/post/post/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</link>
       <pubDate>Wed, 18 May 2011 01:45:00 +0000</pubDate>
       
-      <guid>/post/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</guid>
+      <guid>https://lornlab.org/post/post/hackers-que-voce-deveria-conhecer-1-brad-fitzpatrick/</guid>
       <description>Esta série de posts é baseada na idéia do site Papodehomemque tem uma série parecida chamada “Homens que você devia conhecer”.
 A ideia é falar de hackers em geral, tipo algum dia pode ter uma história de um cortador de lenha que fez uma mesa só com seu machado por exemplo :) Esse é um exemplo clássico de hacker.
-  Brad Fitzpatrick é um dos muitos hackers programadores que você deveria conhecer ou ao menos saber o que ele já fez.</description>
+Brad Fitzpatrick é um dos muitos hackers programadores que você deveria conhecer ou ao menos saber o que ele já fez.</description>
     </item>
     
     <item>
       <title>Como Funciona a Escala Pentatonica</title>
-      <link>/post/como-funciona-a-escala-pentatonica/</link>
+      <link>https://lornlab.org/post/post/como-funciona-a-escala-pentatonica/</link>
       <pubDate>Sat, 16 Apr 2011 02:59:00 +0000</pubDate>
       
-      <guid>/post/como-funciona-a-escala-pentatonica/</guid>
+      <guid>https://lornlab.org/post/post/como-funciona-a-escala-pentatonica/</guid>
       <description> </description>
     </item>
     
     <item>
       <title>Meu Ambiente De Trabalho Em N Itens</title>
-      <link>/post/meu-ambiente-de-trabalho-em-n-itens/</link>
+      <link>https://lornlab.org/post/post/meu-ambiente-de-trabalho-em-n-itens/</link>
       <pubDate>Tue, 12 Apr 2011 17:59:00 +0000</pubDate>
       
-      <guid>/post/meu-ambiente-de-trabalho-em-n-itens/</guid>
+      <guid>https://lornlab.org/post/post/meu-ambiente-de-trabalho-em-n-itens/</guid>
       <description>O peka me convidou para a correntinha do bem, e ainda me intimou pelo twitter :/ aqui está como é meu ambiente de trabalho.
- ZSH, o cara é tão bom que tem um post só para ele :) iTerm2 - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do iTerm2 e vou dizer, deixa o Terminal.</description>
+ZSH, o cara é tão bom que tem um post só para ele :) iTerm2 - Eu sempre usei o Terminal.App padrão do MacOSX, há um tempo atrás ouvi falar do iTerm, mas dado a minha pessima organização, acabei me esquecendo. Por causa dessa foto no twitter/facebook recebi a dica do iTerm2 e vou dizer, deixa o Terminal.</description>
     </item>
     
     <item>
       <title>Usando ZSH</title>
-      <link>/post/usando-zsh/</link>
+      <link>https://lornlab.org/post/post/usando-zsh/</link>
       <pubDate>Tue, 12 Apr 2011 05:24:00 +0000</pubDate>
       
-      <guid>/post/usando-zsh/</guid>
+      <guid>https://lornlab.org/post/post/usando-zsh/</guid>
       <description>Esses dias re-descobri o zsh, já havia testado a um tempo atrás mas agora foi pra valer :)
 E vou dizer, não há shell melhor :) muito melhor que o Bash
- O historico do ZSH é compartilhado por TODAS sessões dele, diferente do bash que cada sessão tem seu histórico ( e você tem que ficar procurando onde foi que digitou aquele comando para recuperar ele do histórico ). ZSH tem autocomplete para tudo, ok bash também, mas o ZSH é bem mágico ele tem autocomplete para o kill, listando os processos que estão rolando e você digita o nome ele já tras o pid para você, ps -aux?</description>
+O historico do ZSH é compartilhado por TODAS sessões dele, diferente do bash que cada sessão tem seu histórico ( e você tem que ficar procurando onde foi que digitou aquele comando para recuperar ele do histórico ). ZSH tem autocomplete para tudo, ok bash também, mas o ZSH é bem mágico ele tem autocomplete para o kill, listando os processos que estão rolando e você digita o nome ele já tras o pid para você, ps -aux?</description>
     </item>
     
     <item>
       <title>Perl Para Sysadmins E DBAs</title>
-      <link>/post/2009-01-20-perl-para-sysadmins-e-dbas/</link>
+      <link>https://lornlab.org/post/post/2009-01-20-perl-para-sysadmins-e-dbas/</link>
       <pubDate>Tue, 20 Jan 2009 04:17:00 +0000</pubDate>
       
-      <guid>/post/2009-01-20-perl-para-sysadmins-e-dbas/</guid>
+      <guid>https://lornlab.org/post/post/2009-01-20-perl-para-sysadmins-e-dbas/</guid>
       <description>Rau!
 Depois de séculos sem posts, apenas um post para linkar para o material da minha palestra no fisl ( que não foi das melhores porque não terminei a palestra antes e fiquei BEM doente em POA :/ )
 https://lornlab.org/palestra_fisl/
@@ -125,10 +119,10 @@ Update: O problema era que o Dreamhost estava interpretando os .</description>
     
     <item>
       <title>Perl Para Sysadmins E DBAs</title>
-      <link>/post/perl-para-sysadmins-e-dbas/</link>
+      <link>https://lornlab.org/post/post/perl-para-sysadmins-e-dbas/</link>
       <pubDate>Tue, 20 Jan 2009 04:17:00 +0000</pubDate>
       
-      <guid>/post/perl-para-sysadmins-e-dbas/</guid>
+      <guid>https://lornlab.org/post/post/perl-para-sysadmins-e-dbas/</guid>
       <description>Rau!
 Depois de séculos sem posts, apenas um post para linkar para o material da minha palestra no fisl ( que não foi das melhores porque não terminei a palestra antes e fiquei BEM doente em POA :/ )
 https://lornlab.org/palestra_fisl/
@@ -139,154 +133,154 @@ Update: O problema era que o Dreamhost estava interpretando os .</description>
     
     <item>
       <title>Load Balance ou Round Robin de DNS</title>
-      <link>/post/2007-08-22-sitemap-no-google/</link>
+      <link>https://lornlab.org/post/post/2007-08-22-sitemap-no-google/</link>
       <pubDate>Wed, 22 Aug 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-08-22-sitemap-no-google/</guid>
+      <guid>https://lornlab.org/post/post/2007-08-22-sitemap-no-google/</guid>
       <description>Eu sempre vi um Sitemap como uma ajuda para o usuário encontrar o que está buscando, tipo: “Ah, eu vi alguma coisa sobre compilar o Apache nesse site mas, não acho, deixa eu ver o mapa do site a.k.a Sitemap, opa achei!” Você pode estar pensando: “é, mas o google faz isso muito melhor e mais fácil hoje em dia basta usar na busca site:http://www.lornlab.org”. Sim, mas eu sou da época que passava reportagem sobre o Aonde na televisão, dizendo que o criador, que só tinha 16 anos, tinha tido uma brilhante idéia, e agora ganhava muito dinheiro e empregava a família inteira, nessa época mapa do site ajudava muito :)</description>
     </item>
     
     <item>
       <title>Skype offline</title>
-      <link>/post/2007-08-20-skype-offline/</link>
+      <link>https://lornlab.org/post/post/2007-08-20-skype-offline/</link>
       <pubDate>Mon, 20 Aug 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-08-20-skype-offline/</guid>
+      <guid>https://lornlab.org/post/post/2007-08-20-skype-offline/</guid>
       <description>O Skype ficou offline semana passada, o pessoal da empresa disse que era problemas na infra deles. Hoje vi no Meiobit que tinha um hoax dizendo que foram os Russos, sempre eles “Na Rússia soviética você não vai até o skype, ele vem até você”, e até apareceu um script Perl por lá, a possível causa de toda a bagunça:
 #!/usr/bin/perl # Simle Code by Maranax Porex ;D # Ya Skaypeg!</description>
     </item>
     
     <item>
       <title>300</title>
-      <link>/post/2007-08-01-300/</link>
+      <link>https://lornlab.org/post/post/2007-08-01-300/</link>
       <pubDate>Wed, 01 Aug 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-08-01-300/</guid>
+      <guid>https://lornlab.org/post/post/2007-08-01-300/</guid>
       <description>Assisti 300 em DVD, gostei como toda adaptação dos quadrinhos do Frank Miller, Sin City ficou muito bom também, tinha alguns detalhes a mais, que não tinha nos quadrinhos, mas com certeza foi só para deixar um ar de “sobrenatural”, gostei também do DVD de extras que tem entrevistas com historiadores sobre Esparta, entrevistas com Frank Miller e com o Diretor ( Zack Snyder) .
 De acordo os historiadores para cada “Espartano” tinha 15 escravos (!</description>
     </item>
     
     <item>
       <title>Transformers, o filme</title>
-      <link>/post/2007-07-23-transformers-o-filme/</link>
+      <link>https://lornlab.org/post/post/2007-07-23-transformers-o-filme/</link>
       <pubDate>Wed, 01 Aug 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-07-23-transformers-o-filme/</guid>
+      <guid>https://lornlab.org/post/post/2007-07-23-transformers-o-filme/</guid>
       <description>Eu estava muito ansioso para ver o filme dos Transformers, eu sou da nova geração de Transformers conhecida como “Beast Wars” diria que é um fork do Transformers original, a diferença é que por default eles são animais e não veiculos ,a história também não se passa na terra, mas com o tempo acontecem algumas evoluções e eles acabam virando veiculos com um leve toque animal, não são Autobots e Decepticons, mas são Maximals e Predacons, e os unicos personagens que tem os mesmos nomes são Optimus Prime e Megatron, o resto dos personagens você até consegue fazer uma semelhança com os da série antiga mas tem outros nomes.</description>
     </item>
     
     <item>
       <title>ZFS com Oracle</title>
-      <link>/post/2007-08-01-zfs-com-oracle/</link>
+      <link>https://lornlab.org/post/post/2007-08-01-zfs-com-oracle/</link>
       <pubDate>Wed, 01 Aug 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-08-01-zfs-com-oracle/</guid>
+      <guid>https://lornlab.org/post/post/2007-08-01-zfs-com-oracle/</guid>
       <description>Consegui colocar o primeiro servidor Solaris em produção :) e aproveitei para fazer uns testes no ZFS. Conversei com o DBA aqui e ele criou toda a estrutura do Oracle no ZFS e…ficou muito lerdo! :( pior, mais lerdo que Windows com NTFS!! Ai ele pesquisou na internet e tal e eis que o mundo inteiro tem esse problema… Eu estava animado com ZFS pois Benchmarks diziam que ZFS era muito rápido.</description>
     </item>
     
     <item>
       <title>Safari algum tempo depois</title>
-      <link>/post/2007-07-23-safari-algum-tempo-depois/</link>
+      <link>https://lornlab.org/post/post/2007-07-23-safari-algum-tempo-depois/</link>
       <pubDate>Mon, 23 Jul 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-07-23-safari-algum-tempo-depois/</guid>
+      <guid>https://lornlab.org/post/post/2007-07-23-safari-algum-tempo-depois/</guid>
       <description>Há pouco mais que um mês eu comecei a usar o novo Safari, tinha lido que ele renderizava paginas mais rapido e etc resolvi testar, e não é que eu gostei? :) é lógico que não tem como abandonar o Firefox com todas usas extensões mas basicamente só uso o Firefox pra trabalhar e acessar o site do banco, 60% do tempo o Firefox fica fechado e a memória do Macbook agracede ;) O Safari realmente renderiza páginas mais rápidos, mas não é só isso eu percebi que não usava tudo que o Firefox tinha e basicamente o que eu preciso é: um browser com abas.</description>
     </item>
     
     <item>
       <title>O Homem do Castelo Alto</title>
-      <link>/post/2007-06-13-o-homem-do-castelo-alto/</link>
+      <link>https://lornlab.org/post/post/2007-06-13-o-homem-do-castelo-alto/</link>
       <pubDate>Wed, 13 Jun 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-06-13-o-homem-do-castelo-alto/</guid>
+      <guid>https://lornlab.org/post/post/2007-06-13-o-homem-do-castelo-alto/</guid>
       <description>Livro clássico do Philp K. Dick, o mesmo autor de Minority Report, muito interessante, conta como seria o mundo se o “Eixo” divesse ganhado a 2a guerra mundial, para quem não sabe o Eixo é a Alemanhã, Italia, e o Japão, por causa disso muitas pessoas no mundo estão usando o “Oraculo” que é o I-Ching, eu sei o I-Ching é chinês mas ele é usado nesse mundo :P, e na historia tem um livro que é meio proibido que conta o contrario ( que é a nossa relidade ), ou seja, o Eixo perdendo a guerra, toda a historia vai de utilização do iChing pra saber o que fazer, e os personagens comentando esse livro, offtopicamente eu ganhei o livro do Peka no ultimo amigo secreto da empresa, misteriosamente eu gostei mais do marca pagina que veio junto do que dos livros :P o marca pagina diz “Selecione os seus pensamentos, pois eles conduzem o seu sucesso” ou coisa assim, arrumo assim que estiver com o marca página na mão ;) valeu Peka.</description>
     </item>
     
     <item>
       <title>Testando o Safari</title>
-      <link>/post/2007-06-12-testando-o-safari/</link>
+      <link>https://lornlab.org/post/post/2007-06-12-testando-o-safari/</link>
       <pubDate>Tue, 12 Jun 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-06-12-testando-o-safari/</guid>
+      <guid>https://lornlab.org/post/post/2007-06-12-testando-o-safari/</guid>
       <description>Bom, como vocês já sabem estou com um Macbook, logo, estou utilizando MacOSX e confesso que praticamente não utilizei o Safari, não dei muita chance pro browser, fui logo pro Firefox, só que depois do boom que vai ser lançado para Windows, todo mundo comentando, falando que é rapido e tal, não resisti, vou testar o Safari por um tempo pra ver se sobrevivo depois posto um mini-review, não estou utilizando muitas extensões no firefox e a unica que senti falta até agora foi o Scribfire, estou escrevendo esse post direto pela interface do Wordpress, faz uns 20min que estou usando e realmente, ele renderiza mais rapido, e com certeza não deve comer tanta memoria como o Firefox ;) Vamos ver no que vai dar.</description>
     </item>
     
     <item>
       <title>1 mês e meio depois</title>
-      <link>/post/2007-06-08-1-mes-e-meio-depois/</link>
+      <link>https://lornlab.org/post/post/2007-06-08-1-mes-e-meio-depois/</link>
       <pubDate>Fri, 08 Jun 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-06-08-1-mes-e-meio-depois/</guid>
+      <guid>https://lornlab.org/post/post/2007-06-08-1-mes-e-meio-depois/</guid>
       <description>Bom, dessa vez eu tenho uma boa desculpa ;) Eu não falei no Post do FISL, mas eu comprei um Macbook Black, e sim, é muito legal o hardware o software, o MacOSX é “fandardigo” ( como diria o tiririca ) não vou falar que em 1 mês e meio nunca travou, travou 1 ou outro software quando eu forçava a barra :P, mas nada que tivesse que reiniciar o sistema.</description>
     </item>
     
     <item>
       <title>Fisl 8</title>
-      <link>/post/2007-04-17-fisl-8/</link>
+      <link>https://lornlab.org/post/post/2007-04-17-fisl-8/</link>
       <pubDate>Tue, 17 Apr 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-04-17-fisl-8/</guid>
+      <guid>https://lornlab.org/post/post/2007-04-17-fisl-8/</guid>
       <description>Mais um Fisl que eu consegui ir :) esse infelizmente não vi muitas palestras porque estava participando do Hackthon de Perl6, mas vamos as minhas considerações:
 Eu não consegui ver muitas palestras, primeiro porque não tinha muitas que me interessavam ( apesar de eu ter perdido umas 2 muito interessantes ) eu estava enrolado com o Hackthon do Perl6 queria começar a entender o Perl6 e ajudar em alguma coisa, mas devido a problemas na rede do Fisl, que tantas outra pessoas também diveram, estava dificil instalar as coisas necessárias, mas foi bem proveitoso, eu entendi melhor o Perl6 ( tinha muita coisa pra explicar ) mesmo assim, houve avanços no desenvolvimento que podem ser conferidos aqui, parabéns a todos que participaram :D</description>
     </item>
     
     <item>
       <title>SOAP quanto mais complicado melhor</title>
-      <link>/post/2007-03-19-soap-quanto-mais-complicado-melhor/</link>
+      <link>https://lornlab.org/post/post/2007-03-19-soap-quanto-mais-complicado-melhor/</link>
       <pubDate>Mon, 19 Mar 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-03-19-soap-quanto-mais-complicado-melhor/</guid>
+      <guid>https://lornlab.org/post/post/2007-03-19-soap-quanto-mais-complicado-melhor/</guid>
       <description>Faz tempo que não faço um post, mas infelizmente esse é de revolta :P . Bom, tudo começou quando um cliente precisou fazer uma integração atraves de um webservice em SOAP, para minha sorte esse webservice foi feito em .Net, aí já viu né? integração 0, beleza!
 Desisti da implantacão, e ai para minha grande sorte morphiana, eis que me aparece outro webservice em SOAP, pelo menos esse não foi feito em .</description>
     </item>
     
     <item>
       <title>Sandman - Casa De Bonecas</title>
-      <link>/post/2007-02-14-sandman-casa-de-bonecas/</link>
+      <link>https://lornlab.org/post/post/2007-02-14-sandman-casa-de-bonecas/</link>
       <pubDate>Wed, 14 Feb 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-02-14-sandman-casa-de-bonecas/</guid>
+      <guid>https://lornlab.org/post/post/2007-02-14-sandman-casa-de-bonecas/</guid>
       <description>Como Sandman é tão famoso e eu nunca tinha lido, não resisti, e comecei a ler a queria começar pelo 1o mas a edição está esgotada (!!) então comecei pelo 2o, Casa de Bonecas pelo que percebi não há nenhum problema com isso você não perde nada.
-  O titulo é estranho e você só entende o porque dele nas ultimas 10 páginas.
+O titulo é estranho e você só entende o porque dele nas ultimas 10 páginas.
 Sandman é muito legal, eu nunca tinha lido nada do Neil Gaiman, outro erro.</description>
     </item>
     
     <item>
       <title>Neuromancer</title>
-      <link>/post/2007-01-24-neuromancer/</link>
+      <link>https://lornlab.org/post/post/2007-01-24-neuromancer/</link>
       <pubDate>Wed, 24 Jan 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-01-24-neuromancer/</guid>
+      <guid>https://lornlab.org/post/post/2007-01-24-neuromancer/</guid>
       <description>Neuromancer, um clássico de 1984, o livro que criou o termo Matrix, na introdução do livro alguém ( que eu esqueci o nome ) compara os personagens do livro com os personagem do filme tipo, X é parecido com o Morpheus, etc, eu vou ser bem sincero as primeiras 100 paginas são bem sonolentas, fala muito de droga, etc, mais depois fica muito bom, todo o mistério que eles criam todas as “funcionalidades” da matrix, que lá é um conceito bem diferente do filme, digamos que até mais real.</description>
     </item>
     
     <item>
       <title>Livro Minority Report</title>
-      <link>/post/2007-01-23-livro-minority-report/</link>
+      <link>https://lornlab.org/post/post/2007-01-23-livro-minority-report/</link>
       <pubDate>Tue, 23 Jan 2007 14:18:00 +0000</pubDate>
       
-      <guid>/post/2007-01-23-livro-minority-report/</guid>
+      <guid>https://lornlab.org/post/post/2007-01-23-livro-minority-report/</guid>
       <description>Se você está pensando em comprar este livro para conhecer mais detalhes sobre o filme, coisas escondidas, esquece.
-  O livro é bem diferente do filme, tem os precogs e o personagem do Tom Cruise, mais o resto é bem diferente.
+O livro é bem diferente do filme, tem os precogs e o personagem do Tom Cruise, mais o resto é bem diferente.
 O livro tem vários contos, o 1a é o Minority Report tem apenas 60 paginas (!!), e não é um dos melhores do livro, o melhor na minha opinião é o conto que originou o filme “Vingador do futuro” lembra?</description>
     </item>
     
     <item>
       <title>Load Balance ou Round Robin de DNS</title>
-      <link>/post/2007-01-22-load-balance-dns-round-robin/</link>
+      <link>https://lornlab.org/post/post/2007-01-22-load-balance-dns-round-robin/</link>
       <pubDate>Mon, 22 Jan 2007 14:31:00 +0000</pubDate>
       
-      <guid>/post/2007-01-22-load-balance-dns-round-robin/</guid>
+      <guid>https://lornlab.org/post/post/2007-01-22-load-balance-dns-round-robin/</guid>
       <description>Bom, eu escrevi load balance para ajudar na pesquisa do Google mas, isso aqui está mais para Round-Robin :) Eu fiz isso com o Bind 9 mas, DNS é DNS, acho que funciona eu qualquer outro, a idéia é bem simples, veja por você mesmo:
 $TTL 3600 @ IN SOA kerberos.quux.com.br. support.quux.com.br. ( 2007091403 ; serial 10800 ; refresh period 1800 ; retry period 2419200 ; expire period 86400) ; minimum TTL period ; @ IN NS kerberos.</description>
     </item>
     
     <item>
       <title>Relato Conilsi - YAPC::SA::2006</title>
-      <link>/post/2006-11-21-relato-conilsi-yapc-sa-2006/</link>
+      <link>https://lornlab.org/post/post/2006-11-21-relato-conilsi-yapc-sa-2006/</link>
       <pubDate>Tue, 21 Nov 2006 14:06:00 +0000</pubDate>
       
-      <guid>/post/2006-11-21-relato-conilsi-yapc-sa-2006/</guid>
+      <guid>https://lornlab.org/post/post/2006-11-21-relato-conilsi-yapc-sa-2006/</guid>
       <description>O Conisli desse ano, certamente foi o melhor que eu participei, e como já disse para alguns amigos monges para o Perl, foi melhor que o Fisl
 Infelizmente não podemos contar com a presença do Larry Wall, ele ficou doente aos 45 do 2a tempo e não pode vir, mas a Hacker Audrey Tang deu conta do recado, dando palestrar muito boas.
 PS: vocês precisam ver ela programando, é meio insano, as vezes parece que ela está escrevendo um texto normal, sem contar que ela digita muito rápido.</description>
@@ -294,10 +288,10 @@ PS: vocês precisam ver ela programando, é meio insano, as vezes parece que ela
     
     <item>
       <title>FISL 7.0</title>
-      <link>/post/fisl-7-0/</link>
+      <link>https://lornlab.org/post/post/fisl-7-0/</link>
       <pubDate>Wed, 19 Apr 2006 20:23:00 +0000</pubDate>
       
-      <guid>/post/fisl-7-0/</guid>
+      <guid>https://lornlab.org/post/post/fisl-7-0/</guid>
       <description>ae pessoal, estou no FISL o Google esta aqui, vou atualizando esse post sempre que possivel e logo mais tem fotos
 Cheguei ontem ao FISL, não postei nada de la porque o telecentro vivia cheio de gente, e a maioria vendo o orkut -_-
 Bom, mas eis o meu relato, chegando lá logo na entrada já dava para perceber que o Google patrocinou boa parte do fisl, banners logo na entrada e o crachá estava escrito Google embaixo, a parte de grupo de usuários estava menor que o ano passado, estava bom, rever velhos amigos, e adquirir mais uns novos</description>
